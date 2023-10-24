@@ -1,0 +1,13 @@
+{
+    "colors.enable": true,
+    "coc.preferences.formatOnSave": true,
+    "clangd.path": "/usr/bin/clangd",
+    "clangd.arguments": [
+        "--all-scopes-completion",
+        "--background-index",
+        "--clang-tidy",
+        "--clang-tidy-checks=performance-*, bugprone-*, misc-*, google-*, modernize-*, readability-*, portability-*",
+        "--completion-parse=auto",
+        "--completion-style=detailed"
+    ],
+}

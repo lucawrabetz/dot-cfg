@@ -1,0 +1,142 @@
+snippet beg "begin{} / end{}" bA
+\begin{$1} $2
+	$3
+\end{$1}
+$0
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+snippet td "subscript" iA
+_{$1}$0
+endsnippet
+
+snippet tg "superscript" iA
+^{$1}$0
+endsnippet
+
+snippet // "fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "numerator fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+priority 1000
+snippet '^.*\)/' "brackets fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+
+snippet sum "sum" i
+\sum_{$1}^{$2} $0
+endsnippet
+
+snippet set "set" i
+\left\\{ $1 \right\\} $0
+endsnippet
+
+snippet min "min" i
+\min_{$1}$0
+endsnippet
+
+snippet max "max" i
+\max_{$1}$0
+endsnippet
+
+snippet bt "bold text" i
+\textbf{$1}$0
+endsnippet
+
+snippet it "italic text" i
+\emph{$1}$0
+endsnippet
+
+snippet tt "text" i
+\text{$1}$0
+endsnippet
+
+snippet lb "label" i
+\label{$1}$0
+endsnippet
+
+snippet tag "tag" i
+\tag{$1}$0
+endsnippet
+
+snippet ref "eqref" i
+\eqref{$1}$0
+endsnippet
+
+snippet rref "ref" i
+\ref{$1}$0
+endsnippet
+
+snippet cite "cite" i
+\cite{$1}$0
+endsnippet
+
+snippet mbb "mathbb" i
+\mathbb{$1}$0
+endsnippet
+
+snippet mbf "mathbf" i
+\mathbf{$1}$0
+endsnippet
+
+priority 10
+snippet hat "hat" i
+\hat{$1}$0
+endsnippet
+
+priority 100
+snippet "([a-su-zA-SU-Z])hat" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+snippet bar "bar" i
+\bar{$1}$0
+endsnippet
+
+priority 100
+snippet "([a-zA-Z])bar" "bar" riA
+\overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet til "tilde" i
+\tilde{$1}$0
+endsnippet
+
+snippet tr "transpose" i
+^\top$0
+endsnippet
+
+snippet cal "calligraphic" i
+\mathcal{$1}$0
+endsnippet

@@ -15,6 +15,10 @@ set -gx LATEX /Users/luw28/.latex
 set -gx BIB $LATEX/main.bib
 set -gx PYTHON3 /Users/luw28/anaconda3/bin/python3
 set -gx NODEJS /opt/homebrew/bin/node
+set -gx SMOD04 luw28@smod04.ie.pitt.edu
+set -gx IESUMS1 luw28@iesums1.ie.pitt.edu
+set -gx IESUMS10 luw28@iesums10.ie.pitt.edu
+set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
 
 # Gurobi
 set -gx PATH $GUROBI_HOME/bin $PATH
@@ -223,10 +227,13 @@ alias gtv 'git tag | sort -V'
 alias vim nvim
 alias vrc "vim $VIMRC"
 alias frc "vim $FISHRC"
-alias iesums1 "ssh luw28@iesums1.ie.pitt.edu"
-alias iesums10 "ssh luw28@iesums10.ie.pitt.edu"
-alias iesums11 "ssh luw28@iesums11.ie.pitt.edu"
-alias smod04 "ssh luw28@smod04.ie.pitt.edu"
+alias iesums1 "ssh $IESUMS1"
+alias iesums10 "ssh $IESUMS10"
+alias iesums11 "ssh $IESUMS11"
+alias smod04 "ssh $SMOD04"
+alias sums1cp "scp $IESUMS1:/home/luw28/"
+alias sums10cp "scp $IESUMS10:/home/luw28/"
+alias sums11cp "scp $IESUMS11:/home/luw28/"
 alias nt "./nt.fish -n"
 
 clear

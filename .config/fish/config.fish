@@ -6,14 +6,15 @@ set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
 
 # Environment Variables
-set -gx NVIM /Users/luw28/.config/nvim
+set -gx NVIM $HOME/.config/nvim
 set -gx VIMRC $NVIM/init.vim
-set -gx FISH /Users/luw28/.config/fish
+set -gx FISH $HOME/.config/fish
 set -gx FISHRC $FISH/config.fish
+set -gx TMUXRC $HOME/.tmux.conf
 set -gx GUROBI_HOME /Library/gurobi1001/macos_universal2
-set -gx LATEX /Users/luw28/.latex
+set -gx LATEX $HOME/.latex
 set -gx BIB $LATEX/main.bib
-set -gx PYTHON3 /Users/luw28/anaconda3/bin/python3
+set -gx PYTHON3 $HOME/anaconda3/bin/python3
 set -gx NODEJS /opt/homebrew/bin/node
 set -gx SMOD04 luw28@smod04.ie.pitt.edu
 set -gx IESUMS1 luw28@iesums1.ie.pitt.edu
@@ -24,14 +25,13 @@ set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
 set -gx PATH $GUROBI_HOME/bin $PATH
 
 # Aliases
-alias config '/usr/bin/git --git-dir=/Users/luw28/.cfg/ --work-tree=/Users/luw28'
+alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ta 'tmux attach -t'
 alias tad 'tmux attach -d -t'
 alias tds _tmux_directory_session
 alias tkss 'tmux kill-session -t'
 alias tksv 'tmux kill-server'
 alias tl 'tmux list-sessions'
-#tmuxconf='$EDITOR $ZSH_TMUX_CONFIG'
 alias ts 'tmux new-session -s'
 alias l 'ls -lah'
 alias la 'ls -lAh'
@@ -227,6 +227,7 @@ alias gtv 'git tag | sort -V'
 alias vim nvim
 alias vrc "vim $VIMRC"
 alias frc "vim $FISHRC"
+alias trc "vim $TMUXRC"
 alias iesums1 "ssh $IESUMS1"
 alias iesums10 "ssh $IESUMS10"
 alias iesums11 "ssh $IESUMS11"
@@ -235,13 +236,18 @@ alias sums1cp "scp $IESUMS1:/home/luw28/"
 alias sums10cp "scp $IESUMS10:/home/luw28/"
 alias sums11cp "scp $IESUMS11:/home/luw28/"
 alias nt "./nt.fish -n"
+# python
+alias python "python3"
+alias pip "pip3"
 
 clear
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /Users/luw28/anaconda3/bin/conda
-    eval /Users/luw28/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f $HOME/anaconda3/bin/conda
+    eval $HOME/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 end
 # <<< conda initialize <<<
 
+set -gx PATH $HOME/anaconda3/bin/ $PATH
+set -gx PATH $HOME/anaconda3/condabin $PATH

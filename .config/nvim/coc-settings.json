@@ -2,6 +2,9 @@
     "colors.enable": true,
     "coc.preferences.formatOnSave": true,
     "clangd.path": "/usr/bin/clangd",
+    "clangd.fallbackFlags": [
+        "-std=c++17"
+    ],
     "clangd.arguments": [
         "--all-scopes-completion",
         "--background-index",

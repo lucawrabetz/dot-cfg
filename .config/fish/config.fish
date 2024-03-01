@@ -235,7 +235,7 @@ alias smod04 "ssh $SMOD04"
 alias sums1cp "scp $IESUMS1:/home/luw28/"
 alias sums10cp "scp $IESUMS10:/home/luw28/"
 alias sums11cp "scp $IESUMS11:/home/luw28/"
-alias nt "./nt.fish -n"
+alias nt "python nt.py -n"
 # python
 alias python "python3"
 alias pip "pip3"

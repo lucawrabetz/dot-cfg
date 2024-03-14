@@ -116,9 +116,10 @@ command! SaveAllAndCleanup call SaveAllAndCleanup()
     "	<bar>          the '|' character, which otherwise needs to be escaped '\|'
 let mapleader = "\<Space>"
 let maplocalleader = "\<Space>"
-nnoremap <leader>w :wa<CR>
-nnoremap <leader>q :wa<CR>:qa<CR>
-nnoremap <leader>fq :qa!<CR>
+nnoremap <Leader>w :wa<CR>
+nnoremap <Leader>c :q<CR>
+nnoremap <Leader>q :wa<CR>:qa<CR>
+nnoremap <Leader>fq :qa!<CR>
 inoremap ;; <Esc>la
 " use alt + hjkl to resize windows TODO : FIGURE OUT M/ALT OR A DIFFERENT MAP
 nnoremap <M-j>    :resize -2<CR>
@@ -138,6 +139,14 @@ nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
 nnoremap <Leader>o :bnext<CR>
 nnoremap <Leader>i :bprev<CR>
+nnoremap <Leader>m :bdelete<CR>
+nnoremap <Leader>b :bfirst<CR>
+nnoremap <Leader>n :blast<CR>
+nnoremap <Leader>a :badd 
+nnoremap <Leader>ff /
+nnoremap <Leader>fr :%s/
+nnoremap <Leader>fs :s/
+
 
 " ~<air, tmux>line~
 let g:airline_theme='molokai'
@@ -170,9 +179,6 @@ let g:vimtex_quickfix_mode=0
 let g:vimtex_view_method='skim'
 let conceallevel=1
 let g:tex_conceal='abdmg'
-" inoremap <leader><leader> <Esc>/<(++)><CR>c6l
-" vnoremap <leader><leader> <Esc>/<(++)><CR>c6l
-" map <leader><leader> <Esc>/<(++)><CR>c6l
 
 " ~ultisnips~
 let g:UltiSnipsExpandTrigger = '<Leader>;'

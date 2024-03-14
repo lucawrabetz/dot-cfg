@@ -22,6 +22,10 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/seoul256.vim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'sainnhe/everforest'
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 call plug#end()
 
 set fileencoding=utf-8
@@ -146,6 +150,10 @@ nnoremap <Leader>a :badd
 nnoremap <Leader>ff /
 nnoremap <Leader>fr :%s/
 nnoremap <Leader>fs :s/
+nnoremap zz :FZF<CR>
+nnoremap zf :Files<CR>
+nnoremap zg :Rg<CR>
+nnoremap zl :Lines<CR>
 
 
 " ~<air, tmux>line~

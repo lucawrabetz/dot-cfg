@@ -1,13 +1,21 @@
 {
-    "colors.enable": true,
+    "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSave": true,
+    "colors.enable": true,
     "clangd.path": "/usr/bin/clangd",
+    "clangd.fallbackFlags": [
+        "-std=c++17"
+    ],
     "clangd.arguments": [
         "--all-scopes-completion",
         "--background-index",
+        "--format-style=file",
         "--clang-tidy",
         "--clang-tidy-checks=performance-*, bugprone-*, misc-*, google-*, modernize-*, readability-*, portability-*",
         "--completion-parse=auto",
         "--completion-style=detailed"
     ],
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "black",
 }

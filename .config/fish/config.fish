@@ -25,6 +25,8 @@ set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
 set -gx PATH $GUROBI_HOME/bin $PATH
 
 # Aliases
+alias c 'clear'
+alias e 'exit'
 alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ta 'tmux attach -t'
 alias tad 'tmux attach -d -t'
@@ -116,10 +118,10 @@ alias gfg 'git ls-files | grep'
 alias gfo 'git fetch origin'
 alias gg 'git gui citool'
 alias gga 'git gui citool --amend'
-alias ggpull 'git pull origin "$(git_current_branch)"'
+alias ggpull 'git pull origin (git symbolic-ref --short HEAD)'
 alias ggpur ggu
-alias ggpush 'git push origin "$(git_current_branch)"'
-alias ggsup 'git branch --set-upstream-to=origin/$(git_current_branch)'
+alias ggpush 'git push origin (git symbolic-ref --short HEAD)'
+alias ggsup 'git branch --set-upstream-to=origin/(git symbolic-ref --short HEAD)'
 alias ghh 'git help'
 alias gignore 'git update-index --assume-unchanged'
 alias gignored 'git ls-files -v | grep "^[[:lower:]]"'
@@ -142,7 +144,7 @@ alias glol 'git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgre
 alias glola 'git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all'
 alias glols 'git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --stat'
 alias glp _git_log_prettily
-alias gluc 'git pull upstream $(git_current_branch)'
+alias gluc 'git pull upstream (git symbolic-ref --short HEAD)'
 alias glum 'git pull upstream $(git_main_branch)'
 alias gm 'git merge'
 alias gma 'git merge --abort'
@@ -164,8 +166,8 @@ alias gpristine 'git reset --hard && git clean --force -dfx'
 alias gprom 'git pull --rebase origin $(git_main_branch)'
 alias gpromi 'git pull --rebase=interactive origin $(git_main_branch)'
 alias gprv 'git pull --rebase -v'
-alias gpsup 'git push --set-upstream origin $(git_current_branch)'
-alias gpsupf 'git push --set-upstream origin $(git_current_branch) --force-with-lease'
+alias gpsup 'git push --set-upstream origin (git symbolic-ref --short HEAD)'
+alias gpsupf 'git push --set-upstream origin (git symbolic-ref --short HEAD) --force-with-lease'
 alias gpu 'git push upstream'
 alias gpv 'git push --verbose'
 alias gr 'git remote'
@@ -188,7 +190,7 @@ alias grhs 'git reset --soft'
 alias grm 'git rm'
 alias grmc 'git rm --cached'
 alias grmv 'git remote rename'
-alias groh 'git reset origin/$(git_current_branch) --hard'
+alias groh 'git reset origin/(git symbolic-ref --short HEAD) --hard'
 alias grrm 'git remote remove'
 alias grs 'git restore'
 alias grset 'git remote set-url'
@@ -235,7 +237,7 @@ alias smod04 "ssh $SMOD04"
 alias sums1cp "scp $IESUMS1:/home/luw28/"
 alias sums10cp "scp $IESUMS10:/home/luw28/"
 alias sums11cp "scp $IESUMS11:/home/luw28/"
-alias nt "./nt.fish -n"
+alias nt "python nt.py -n"
 # python
 alias python "python3"
 alias pip "pip3"

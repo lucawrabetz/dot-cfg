@@ -1,0 +1,38 @@
+{
+	"motd": {
+		"cloudBuildErrorAfter": 1594252800000,
+		"cloudBuildWarnAfter": 1590019200000,
+		"defaultNode10After": 1594252800000,
+		"minVersion": "3.0.5",
+		"node8DeploysDisabledAfter": 1613390400000,
+		"node8RuntimeDisabledAfter": 1615809600000,
+		"node8WarnAfter": 1600128000000,
+		"fetched": 1710199927648
+	},
+	"usage": true,
+	"analytics-uuid": "1e676f8c-da67-44d0-be91-ac7d9bb0e34e",
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "100031571112218150776",
+		"email": "wrabetzluca@gmail.com",
+		"email_verified": true,
+		"at_hash": "lr-LgCIQqmQR21iIm4RvsA",
+		"iat": 1709934191,
+		"exp": 1709937791
+	},
+	"tokens": {
+		"expires_at": 1710203526473,
+		"refresh_token": "1//05SStAZShQiaiCgYIARAAGAUSNwF-L9IrNYzxV5s04utp32VRG7mCb8LdMdhCbFO1lA7Ju_1NH2N5x1xvVNi_FcRt9cyb90hSLAc",
+		"scopes": [],
+		"access_token": "ya29.a0Ad52N38RZsb1w6nOuB8sn8mkoaCC65n58KjM1_l6DPwdJxw55IaT7usc0kfK6653WrTnJuSJ39bdMDcROIBI593-7ai1whnxtu1c7vRKcVcfzQsEBW8A2P36JDXzLSZn3QpxIjxB7MJstPE9IIonEokHTgg7X_c9yZ_FkcrHFZgaCgYKAUESARISFQHGX2MikTEkWHAQJPJQh1rES2Nc4g0178",
+		"expires_in": 3599,
+		"scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/cloud-platform",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjA4YmY1YzM3NzJkZDRlN2E3MjdhMTAxYmY1MjBmNjU3NWNhYzMyNmYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAwMDMxNTcxMTEyMjE4MTUwNzc2IiwiZW1haWwiOiJ3cmFiZXR6bHVjYUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6InRXQ095QzNsMkFsMkJjUWFVM1VEUkEiLCJpYXQiOjE3MTAxOTk5MjcsImV4cCI6MTcxMDIwMzUyN30.lEhLb-Id0q5WN6t2u4V6He4DkWf6iyGiZP7Zq2HzX6sMj-omNCJ31Yj9lnw9qXesJCHSCntFUsBeciG-lZaLUwnmmLRAEhuulycuMrhrlKAJFe-WA99VW5ETLFtdxe2S-aDdmhU-_qfosNyoj0mn-C-7L5734_rA3C8GzjxM2Bc9r9vh5yrWhtCQva3gxTXQTLH2gzuR5YnrZ0azQK_3HH7lc8NiswAfqZmubiKplqvbjgInmsjmKDptwUtekc4PTqJ6gTJALXaw6j_bvrnphiqKl_OILuf9_82kd7psTW0li9b4bpS400dir8ghaZopOApv_1q-aPqU8QIckpzURA"
+	},
+	"activeProjects": {
+		"/Users/luw28/Contact3D": "staging"
+	}
+}

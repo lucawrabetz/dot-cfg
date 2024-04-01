@@ -1,9 +1,11 @@
 {
   "dependencies": {
-    "coc-clangd": ">=0.28.0",
+    "coc-clangd": ">=0.30.2",
     "coc-vimtex": ">=1.1.5",
     "coc-json": ">=1.8.0",
     "coc-highlight": ">=2.0.4",
-    "coc-pyright": ">=1.1.325"
-  }
+    "coc-pyright": ">=1.1.325",
+    "coc-tsserver": ">=2.1.4"
+  },
+  "lastUpdate": 1710448448831
 }

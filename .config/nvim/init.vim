@@ -22,6 +22,10 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/seoul256.vim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'sainnhe/everforest'
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 call plug#end()
 
 set fileencoding=utf-8
@@ -116,9 +120,12 @@ command! SaveAllAndCleanup call SaveAllAndCleanup()
     "	<bar>          the '|' character, which otherwise needs to be escaped '\|'
 let mapleader = "\<Space>"
 let maplocalleader = "\<Space>"
-nnoremap <leader>w :wa<CR>
-nnoremap <leader>q :wa<CR>:qa<CR>
-nnoremap <leader>fq :qa!<CR>
+
+nnoremap <Leader>w :wa<CR>
+nnoremap <Leader>c :q<CR>
+nnoremap <Leader>q :wa<CR>:qa<CR>
+nnoremap <Leader>fq :qa!<CR>
+nnoremap <Leader>fj :%!python -m json.tool<CR>
 inoremap ;; <Esc>la
 " use alt + hjkl to resize windows TODO : FIGURE OUT M/ALT OR A DIFFERENT MAP
 nnoremap <M-j>    :resize -2<CR>
@@ -138,6 +145,25 @@ nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
 nnoremap <Leader>o :bnext<CR>
 nnoremap <Leader>i :bprev<CR>
+nnoremap <Leader>m :bdelete<CR>
+nnoremap <Leader>b :bfirst<CR>
+nnoremap <Leader>n :blast<CR>
+nnoremap <Leader>a :call FzfBufferAdd()<CR>
+function! FzfBufferAdd()
+    let l:path = system('fzf')
+    if l:path != ''
+        execute 'badd ' . fnameescape(l:path)
+    endif
+endfunction
+nnoremap <Leader>ff /
+nnoremap <Leader>fr :%s/
+nnoremap <expr> <Leader>fl ":<C-u>" . line(".") . "," . (line(".")) . "+"
+nnoremap <Leader>fs :s/
+nnoremap zz :FZF<CR>
+nnoremap zf :Files<CR>
+nnoremap zg :Rg<CR>
+nnoremap zl :Lines<CR>
+
 
 " ~<air, tmux>line~
 let g:airline_theme='molokai'
@@ -170,9 +196,6 @@ let g:vimtex_quickfix_mode=0
 let g:vimtex_view_method='skim'
 let conceallevel=1
 let g:tex_conceal='abdmg'
-" inoremap <leader><leader> <Esc>/<(++)><CR>c6l
-" vnoremap <leader><leader> <Esc>/<(++)><CR>c6l
-" map <leader><leader> <Esc>/<(++)><CR>c6l
 
 " ~ultisnips~
 let g:UltiSnipsExpandTrigger = '<Leader>;'

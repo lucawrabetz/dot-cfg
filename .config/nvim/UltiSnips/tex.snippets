@@ -1,8 +1,21 @@
+snippet form "formulation" bA
+\begin{subequations}\label{$1}
+\begin{align}
+$1 &$3 \\
+s.t. \quad &$4
+\end{align}
+\end{subequations}
+endsnippet
+
 snippet beg "begin{} / end{}" bA
 \begin{$1} $2
 	$3
 \end{$1}
 $0
+endsnippet
+
+snippet st "intext subtitle" i
+\noindent \textbf{$1.} $2
 endsnippet
 
 snippet mk "Math" wA
@@ -12,6 +25,10 @@ if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 else:
     snip.rv = ''
 `$2
+endsnippet
+
+snippet dm "Math" wA
+$$ $1 $$ $0
 endsnippet
 
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
@@ -81,6 +98,10 @@ snippet tt "text" i
 \text{$1}$0
 endsnippet
 
+snippet cd "code" i
+\texttt{$1}$0
+endsnippet
+
 snippet lb "label" i
 \label{$1}$0
 endsnippet
@@ -115,7 +136,7 @@ snippet hat "hat" i
 endsnippet
 
 priority 100
-snippet "([a-su-zA-SU-Z])hat" "hat" riA
+snippet "([a-su-zA-SU-Z])hat" "hat" ri
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 

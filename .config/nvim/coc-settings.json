@@ -15,5 +15,7 @@
         "--completion-parse=auto",
         "--completion-style=detailed"
     ],
+    "python.linting.pylintEnabled": true,
     "python.formatting.provider": "black",
+    "python.formatting.blackPath": "black",
 }

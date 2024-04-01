@@ -1,1 +1,4 @@
 .cfg
+.config/*
+!.config/nvim/*
+!.config/fish/*

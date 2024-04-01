@@ -25,6 +25,8 @@ set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
 set -gx PATH $GUROBI_HOME/bin $PATH
 
 # Aliases
+alias c 'clear'
+alias e 'exit'
 alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ta 'tmux attach -t'
 alias tad 'tmux attach -d -t'

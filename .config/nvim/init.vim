@@ -7,6 +7,7 @@ endif
 let g:python3_host_prog = $PYTHON3
 
 call plug#begin()
+Plug 'github/copilot.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'

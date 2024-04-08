@@ -1,6 +1,19 @@
+snippet pn "problemname" i
+\textsc{$1} $2
+endsnippet
+
+snippet ni "noindent" i
+\noindent $1
+endsnippet
+
 snippet col "color" i
 \textcolor{$1}{$2} $3
 endsnippet
+
+snippet todo "todo" i
+\textcolor{red}{TODO: ($1) $2} $3
+endsnippet
+
 snippet form "formulation" i
 \begin{subequations}\label{f: $1}
 \begin{align}

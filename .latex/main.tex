@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+
+%---------------------------------------------------------------------------------
+% PACKAGES
+% --------------------------------------------------------------------------------
+
+\usepackage{amsmath, amsfonts, amscd, latexsym, amsthm, amssymb, algorithm, algpseudocode, titlesec}
+\usepackage[hang,flushmargin]{footmisc} 
+\usepackage{tikz} 
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows}
+\usepackage{xcolor}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{appendix} 
+\usepackage{subcaption}
+\usepackage{float}
+
+%---------------------------------------------------------------------------------
+% DEFINITIONS 
+% --------------------------------------------------------------------------------
+
+% Shift, (re)scale, reshape
+
+\theoremstyle{plain}
+\newtheorem{Th}{Theorem}[section]
+\newtheorem{Lem}{Lemma}[section]
+\newtheorem{Prop}{Proposition}[section]
+\newtheorem{Cor}{Corollary}[section]
+\newtheorem{Alg}{Algorithm}[section]
+\newtheorem{Conj}{Conjecture}[section]
+\newtheorem{Claim}{Claim}[section] 
+\newtheorem{Assump}{Assumption}[section] 
+
+\theoremstyle{definition}
+\newtheorem{Ex}{Example}[section]
+\newtheorem{Def}{Definition}[section]
+\newtheorem{Rem}{Remark}[section]
+
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\dom}{dom}
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\vecc}{vec}
+\DeclareMathOperator*{\proj}{proj}
+\DeclareMathOperator*{\conv}{conv}
+\DeclareMathOperator*{\cone}{cone}
+\DeclareMathOperator*{\ext}{ext}
+\DeclareMathOperator*{\sgn}{sgn} 
+\DeclareMathOperator*{\tail}{tail} 
+\DeclareMathOperator*{\interior}{int} 
+\DeclareMathOperator*{\diam}{diam} 
+\DeclareMathOperator*{\vspan}{span}
+\DeclareMathOperator*{\class}{class}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\vol}{vol}
+\DeclareMathOperator*{\spn}{span}
+
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\INPUT{\item[\algorithmicinput]}
+\algnewcommand\algorithmicoutput{\textbf{Output:}}
+\algnewcommand\OUTPUT{\item[\algorithmicoutput]}
+
+\allowdisplaybreaks
+
+\begin{document} 
+
+% TITLE INFORMATION
+
+\title{}  
+\author{Luca Wrabetz\thanks{Email: luw28@pitt.edu.}}
+\date{Department of Industrial Engineering, University of Pittsburgh \\ [2ex] 
+\today}
+
+\maketitle 
+
+% ABSTRACT 
+
+\begin{abstract} 
+\medskip
+\noindent {\bf Keywords.} 
+\end{abstract} 
+
+
+\bibliographystyle{apacite}
+\bibliography{main}
+\end{document} 

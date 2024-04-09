@@ -7,11 +7,11 @@ snippet ni "noindent" i
 endsnippet
 
 snippet col "color" i
-\textcolor{$1}{$2} $3
+\textcolor{$1}{$2} $0
 endsnippet
 
 snippet todo "todo" i
-\textcolor{red}{TODO: ($1) $2} $3
+\textcolor{red}{TODO: ($1) $2} $0
 endsnippet
 
 snippet form "formulation" i
@@ -21,12 +21,27 @@ $2 &$3 \\
 s.t. \quad &$4
 \end{align}
 \end{subequations}
+$0
 endsnippet
 
 snippet beg "begin{} / end{}" i
 \begin{$1} $2
 	$3
 \end{$1}
+$0
+endsnippet
+
+snippet eni "enumerate" i
+\begin{enumerate}
+	\item $1
+\end{enumerate}
+$0
+endsnippet
+
+snippet iti "itemize" i
+\begin{itemize}
+	\item $1
+\end{itemize}
 $0
 endsnippet
 

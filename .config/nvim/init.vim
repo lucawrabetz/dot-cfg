@@ -212,6 +212,7 @@ let conceallevel=1
 let g:tex_conceal='abdmg'
 
 " ~ultisnips~
+nnoremap <Leader>u :UltiSnipsEdit<CR>
 let g:UltiSnipsExpandTrigger = '<Leader>;'
 let g:UltiSnipsJumpForwardTrigger = '<Leader>;'
 let g:UltiSnipsJumpBackwardTrigger = '<Leader>,'

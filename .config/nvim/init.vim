@@ -122,10 +122,23 @@ command! SaveAllAndCleanup call SaveAllAndCleanup()
 let mapleader = "\<Space>"
 let maplocalleader = "\<Space>"
 
+let g:session_file = $NVIM
+
+func! SaveSession()
+  execute 'mksession! ' . $NVIMSESSIONFILE
+endfunction
+
+" Just saving
+" write all changed buffers
 nnoremap <Leader>w :wa<CR>
-nnoremap <Leader>c :q<CR>
-nnoremap <Leader>q :wa<CR>:qa<CR>
-nnoremap <Leader>fq :qa!<CR>
+" Closing
+" close currently loaded buffer
+nnoremap <Leader>c :call SaveSession()<CR>:q<CR>
+" write all changed buffers and close all buffers
+nnoremap <Leader>q :call SaveSession()<CR>:wa<CR>:qa<CR>
+" close all buffers without writing
+nnoremap <Leader>fq :call SaveSession()<CR>:qa!<CR>
+
 nnoremap <Leader>fj :%!python -m json.tool<CR>
 inoremap ;; <Esc>la
 " use alt + hjkl to resize windows TODO : FIGURE OUT M/ALT OR A DIFFERENT MAP

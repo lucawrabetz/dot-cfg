@@ -8,6 +8,8 @@ set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
 # Environment Variables
 set -gx NVIM $HOME/.config/nvim
 set -gx VIMRC $NVIM/init.vim
+set -gx NVIMSESSION $NVIM/sessions
+set -gx NVIMSESSIONFILE $NVIM/sessions/sessionfile.vim
 set -gx FISH $HOME/.config/fish
 set -gx FISHRC $FISH/config.fish
 set -gx TMUXRC $HOME/.tmux.conf
@@ -227,6 +229,7 @@ alias gtl 'gtl(){ git tag --sort=-v:refname -n --list "${1}*" }; noglob gtl'
 alias gts 'git tag --sign'
 alias gtv 'git tag | sort -V'
 alias vim nvim
+alias vims "nvim -S $NVIMSESSIONFILE"
 alias vrc "vim $VIMRC"
 alias frc "vim $FISHRC"
 alias trc "vim $TMUXRC"

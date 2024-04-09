@@ -21,20 +21,28 @@
 
 % Shift, (re)scale, reshape
 
+% define theorem styles
+% plain style 
 \theoremstyle{plain}
-\newtheorem{Th}{Theorem}[section]
-\newtheorem{Lem}{Lemma}[section]
-\newtheorem{Prop}{Proposition}[section]
-\newtheorem{Cor}{Corollary}[section]
-\newtheorem{Alg}{Algorithm}[section]
-\newtheorem{Conj}{Conjecture}[section]
-\newtheorem{Claim}{Claim}[section] 
-\newtheorem{Assump}{Assumption}[section] 
-
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{conjecture}{Conjecture}
+% definition style
 \theoremstyle{definition}
-\newtheorem{Ex}{Example}[section]
-\newtheorem{Def}{Definition}[section]
-\newtheorem{Rem}{Remark}[section]
+\newtheorem{definition}{Definition}
+\newtheorem{instance}{Instance}
+\newtheorem{question}{Question}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{remark}{Remark}
+
+\newcommand{\aspi}{\textsc{ASPI}}
+\newcommand{\aspid}{\textsc{ASPI-D}}
+\newcommand{\aro}{\textsc{ARO}}
+\newcommand{\arod}{\textsc{ARO-D}}
+\newcommand{\spo}{\textsc{SPO}}
+\newcommand{\spod}{\textsc{SPO-D}}
 
 \DeclareMathOperator*{\argmax}{\arg\!\max}
 \DeclareMathOperator*{\argmin}{\arg\!\min}

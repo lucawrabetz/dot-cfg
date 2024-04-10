@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+%---------------------------------------------------------------------------------
+% PACKAGES
+% --------------------------------------------------------------------------------
+
+\usepackage{amsmath, amsfonts, amscd, latexsym, amsthm, amssymb, algorithm, algpseudocode, titlesec}
+\usepackage[hang,flushmargin]{footmisc} 
+\usepackage{tikz} 
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows}
+\usepackage{xcolor}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{appendix} 
+\usepackage{subcaption}
+\usepackage{float}
+
+%---------------------------------------------------------------------------------
+% DEFINITIONS 
+% --------------------------------------------------------------------------------
+
+% Shift, (re)scale, reshape
+
+% define theorem styles
+% plain style 
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{alg}{Algorithm}[section]
+% definition style
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{instance}{Instance}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{remark}{Remark}[section]
+
+\newcommand{\aspi}{\textsc{ASPI}}
+\newcommand{\aspid}{\textsc{ASPI-D}}
+\newcommand{\aro}{\textsc{ARO}}
+\newcommand{\arod}{\textsc{ARO-D}}
+\newcommand{\spo}{\textsc{SPO}}
+\newcommand{\spod}{\textsc{SPO-D}}
+
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\dom}{dom}
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\vecc}{vec}
+\DeclareMathOperator*{\proj}{proj}
+\DeclareMathOperator*{\conv}{conv}
+\DeclareMathOperator*{\cone}{cone}
+\DeclareMathOperator*{\ext}{ext}
+\DeclareMathOperator*{\sgn}{sgn} 
+\DeclareMathOperator*{\tail}{tail} 
+\DeclareMathOperator*{\interior}{int} 
+\DeclareMathOperator*{\diam}{diam} 
+\DeclareMathOperator*{\vspan}{span}
+\DeclareMathOperator*{\class}{class}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\vol}{vol}
+\DeclareMathOperator*{\spn}{span}
+
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\INPUT{\item[\algorithmicinput]}
+\algnewcommand\algorithmicoutput{\textbf{Output:}}
+\algnewcommand\OUTPUT{\item[\algorithmicoutput]}
+
+\allowdisplaybreaks
+
+\begin{document} 
+
+% TITLE INFORMATION
+
+\title{}  
+\author{Luca Wrabetz\thanks{Email: luw28@pitt.edu.}}
+\date{Department of Industrial Engineering, University of Pittsburgh \\ [2ex] 
+\today}
+
+\maketitle 
+
+% ABSTRACT 
+
+\begin{abstract} 
+\medskip
+\noindent {\bf Keywords.} 
+\end{abstract} 
+
+
+\bibliographystyle{apacite}
+\bibliography{main}
+\end{document} 

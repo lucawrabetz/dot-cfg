@@ -22,6 +22,7 @@ set -gx SMOD04 luw28@smod04.ie.pitt.edu
 set -gx IESUMS1 luw28@iesums1.ie.pitt.edu
 set -gx IESUMS10 luw28@iesums10.ie.pitt.edu
 set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
+set -gx LIN1 root@50.116.44.198
 
 # Gurobi
 set -gx PATH $GUROBI_HOME/bin $PATH
@@ -237,6 +238,7 @@ alias iesums1 "ssh $IESUMS1"
 alias iesums10 "ssh $IESUMS10"
 alias iesums11 "ssh $IESUMS11"
 alias smod04 "ssh $SMOD04"
+alias lin1 "ssh $LIN1"
 alias sums1cp "scp $IESUMS1:/home/luw28/"
 alias sums10cp "scp $IESUMS10:/home/luw28/"
 alias sums11cp "scp $IESUMS11:/home/luw28/"

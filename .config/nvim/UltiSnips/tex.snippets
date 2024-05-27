@@ -49,7 +49,7 @@ snippet st "intext subtitle" i
 \noindent \textbf{$1.} $2
 endsnippet
 
-snippet mk "Math" wA
+snippet mk "Math inline" wA
 $${1}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
     snip.rv = ' '
@@ -58,8 +58,15 @@ else:
 `$2
 endsnippet
 
-snippet dm "Math" wA
+snippet dmi "Math equation in source" wA
 $$ $1 $$ $0
+endsnippet
+
+snippet dme "Math equation" wA
+\begin{equation} \label{eq: $1} \tag{$2}
+	$3 
+\end{equation}
+$0
 endsnippet
 
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
@@ -70,11 +77,11 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
-snippet td "subscript" iA
+snippet td "subscript" i
 _{$1}$0
 endsnippet
 
-snippet tg "superscript" iA
+snippet tg "superscript" i
 ^{$1}$0
 endsnippet
 
@@ -155,6 +162,10 @@ endsnippet
 
 snippet mbb "mathbb" i
 \mathbb{$1}$0
+endsnippet
+
+snippet spc "space" i
+\mathbb{$1}_{$2}^{$3}$0
 endsnippet
 
 snippet mbf "mathbf" i

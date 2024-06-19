@@ -7,6 +7,7 @@ endif
 let g:python3_host_prog = $PYTHON3
 
 call plug#begin()
+Plug 'tpope/vim-fugitive'
 Plug 'github/copilot.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
@@ -139,6 +140,11 @@ nnoremap <Leader>q :call SaveSession()<CR>:wa<CR>:qa<CR>
 " close all buffers without writing
 nnoremap <Leader>fq :call SaveSession()<CR>:qa!<CR>
 
+" git fugitive shortcuts
+nnoremap <Leader>ga :Git add 
+nnoremap <Leader>gc :Git commit -m 
+nnoremap <Leader>gs :Git status<CR>
+
 nnoremap <Leader>fj :%!python -m json.tool<CR>
 inoremap ;; <Esc>la
 " use alt + hjkl to resize windows TODO : FIGURE OUT M/ALT OR A DIFFERENT MAP
@@ -150,6 +156,9 @@ inoremap gf <Esc>
 inoremap fg <Esc>
 inoremap FG <Esc>
 inoremap GF <Esc>
+inoremap <Leader>fg <Esc>
+inoremap <Leader>gf <Esc>
+
 inoremap ;; <Esc>la
 nnoremap <Leader>0 <C-w>v
 nnoremap <Leader>9 <C-w>s

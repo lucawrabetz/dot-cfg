@@ -1,6 +1,8 @@
+% global references / lit-review document
+% try to have one comment before each entry to summarize
+% `%%%` to subdivide into sections, but don't do this too much
+
 %%% bilevel optimization
-%% books
-%% GAREY JOHNSON
 @book{garey1979computers,
     author = "Michael R. Garey and David S. Johnson",
     title = "Computers and Intractability: A Guide to the Theory of NP-Completeness",
@@ -9,7 +11,6 @@
     address = "San Francisco, CA, USA",
     isbn = "0716710455",
 }
-
 @book{bard2013practical,
   title={Practical bilevel optimization: algorithms and applications},
   author={Bard, Jonathan F},
@@ -17,7 +18,6 @@
   year={2013},
   publisher={Springer Science \& Business Media}
 }
-
 % dempe book
 @book{dempe2018bilevel,
   title={Bilevel optimization: theory, algorithms and applications},
@@ -26,7 +26,6 @@
   year={2018},
   publisher={TU Bergakademie Freiberg, Fakult{\"a}t f{\"u}r Mathematik und Informatik Freiberg~…}
 }
-
 % application book - focus on complimentarity modeling in markets, and specifically energy markets
 @book{gabriel2012complementarity,
   title={Complementarity modeling in energy markets},
@@ -35,9 +34,7 @@
   year={2012},
   publisher={Springer Science \& Business Media}
 }
-
-%% surveys
-% focus on surveying classical and evolutionary approaches for bilevel optimization
+% survey - focus on surveying classical and evolutionary approaches for bilevel optimization
 @article{sinha2018bilevelreview,
   author={Sinha, Ankur and Malo, Pekka and Deb, Kalyanmoy},
   journal={IEEE Transactions on Evolutionary Computation}, 
@@ -48,7 +45,6 @@
   pages={276-295},
   doi={10.1109/TEVC.2017.2712906}
 }
-
 % bilevel survey focused on mip reformulations and approaches
 @article{kleinert2021survey,
   title={A survey on mixed-integer programming techniques in bilevel optimization},
@@ -60,8 +56,6 @@
   year={2021},
   publisher={Elsevier}
 }
-
-%% bilevel theoretical papers
 % k-optimal follower, a hierarchy of bounds
 @article{shi2023koptimal,
 	abstract = {We consider mixed integer bilevel linear optimization problems in which the decision variables of the lower-level (follower's) problem are all binary. We propose a general modeling and solution framework motivated by the practical reality that in a Stackelberg game, the follower does not always solve their optimization problem to optimality. They may instead implement a locally optimal solution with respect to a given upper-level decision. Such scenarios may occur when the follower's computational capabilities are limited, or when the follower is not completely rational. Our framework relaxes the typical assumption of perfect rationality that underlies the standard modeling framework by defining a hierarchy of increasingly stringent assumptions about the behavior of the follower. Namely, at level k of this hierarchy, it is assumed that the follower produces a k-optimal solution. Associated with this hierarchy is a hierarchy of upper and lower bounds that are in fact valid for the classical case in which complete rationality of the follower is assumed. Two mixed integer linear programming (MILP) formulations are derived for the resulting optimization problems. Extensive computational results are provided to demonstrate the effectiveness of the proposed MILP formulations and the quality of the bounds produced. The latter are shown to dominate the standard approach based on a single-level relaxation at a reasonable computational cost. Finally, we also explore a class of bilevel problems for which 2-optimal lower-level solutions imply global optimality, and hence we can solve these bilevel problems exactly using the developed MILP formulations.},
@@ -81,10 +75,7 @@
 	year = {2023},
 	bdsk-url-1 = {https://doi.org/10.1007/s12532-022-00227-z}
 }
-
-
-%% pessimistic papers
-% survey
+% survey - pessimistic bilevel
 @article{liu2018pessimistic,
   title={Pessimistic Bilevel Optimization: A Survey},
   author={June Liu and Yuxin Fan and Zhong Chen and Yue Zheng},
@@ -97,10 +88,6 @@
   url={https://doi.org/10.2991/ijcis.11.1.56},
   doi={10.2991/ijcis.11.1.56}
 }
-
-
-%% example applications
-%% military
 % one of the first bilevel papers, focused on military application examples
 @article{bracken1973mathematical,
   title={Mathematical programs with optimization problems in the constraints},
@@ -123,7 +110,6 @@
   year={2019},
   publisher={INFORMS}
 }
-
 @article{israeli2002shortest,
   title={Shortest-path network interdiction},
   author={Israeli, Eitan and Wood, R Kevin},
@@ -134,8 +120,6 @@
   year={2002},
   publisher={Wiley Online Library}
 }
-
-% transportation planning
 % classic hierarchical government-user network improvement model
 @article{leblanc1986bilevel,
 	author = {Larry J. LeBlanc and David E. Boyce},
@@ -151,7 +135,6 @@
 	bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/0191261586900214},
 	bdsk-url-2 = {https://doi.org/10.1016/0191-2615(86)90021-4}
 }
-
 @article{migdalas1995bilevel,
 	abstract = {Well-founded traffic models recognize the individual network user's right to the decision as to when, where and how to travel. On the other hand, the decisions concerning management, control, design and improvement investments are made by the public sector in the interest of the society as a whole. Hence, transportation planning is a characteristic example of a hierarchical process, in which the public sector at one level makes decisions seeking to improve the performance of the network, while at another level the network users make choices with regard to route, travel mode, origin and destination of their travel. Our objective is to provide a review on the current state of research and development in bilevel programming problems that arize in this context, and attract the attention of the global optimization community to this problem class of imense practical importance.},
 	author = {Migdalas, Athanasios},
@@ -170,7 +153,6 @@
 	year = {1995},
 	bdsk-url-1 = {https://doi.org/10.1007/BF01099649}
 }
-
 % benders for binary(linear)-continuous(linear) (upper - lower) bilevel problems for traffic planning
 @article{fontaine2014benders,
 	abstract = {We propose a new fast solution method for linear Bilevel Problems with binary leader and continuous follower variables under the partial cooperation assumption. We reformulate the Bilevel Problem into a single-level problem by using the Karush--Kuhn--Tucker conditions. This non-linear model can be linearized because of the special structure achieved by the binary leader decision variables and subsequently solved by a Benders Decomposition Algorithm to global optimality. We illustrate the capability of the approach on the Discrete Network Design Problem which adds arcs to an existing road network at the leader stage and anticipates the traffic equilibrium for the follower stage. Because of the non-linear objective functions of this problem, we use a linearization method for increasing, convex and non-linear functions based on continuous variables. Numerical tests show that this algorithm can solve even large instances of Bilevel Problems.},
@@ -187,10 +169,7 @@
 	bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/S0191261514001611},
 	bdsk-url-2 = {https://doi.org/10.1016/j.trb.2014.09.007}
 }
-
-%
-
-
+%%%%%%%%% mixed section - needs to be recategorized
 % New references from min-max-min revision
 @article{arslan2022min,
   title={Min-sup-min Robust Combinatorial Optimization with Few Recourse Solutions},
@@ -202,7 +181,6 @@
   year={2022},
   publisher={INFORMS}
 }
-
 @article{buchheim2018alt,
   title={Robust Combinatorial Optimization under Convex and Discrete Cost Uncertainty},
   author={Buchheim, Christoph and Kurtz, Jannis},
@@ -213,7 +191,6 @@
   year={2018},
   publisher={Elsevier}
 }
-
 @article{chassein2021complexity,
   title={On the Complexity of Min-max-min Robustness with Two Alternatives and Budgeted Uncertainty},
   author={Chassein, Andr{\'e} and Goerigk, Marc},
@@ -223,7 +200,6 @@
   year={2021},
   publisher={Elsevier}
 }
-
 @article{chassein2019faster,
   title={Faster Algorithms for Min-max-min Robustness for Combinatorial Problems with Budgeted Uncertainty},
   author={Chassein, Andr{\'e} and Goerigk, Marc and Kurtz, Jannis and Poss, Michael},
@@ -234,7 +210,6 @@
   year={2019},
   publisher={Elsevier}
 }
-
 @article{crema2020min,
 	Abstract = {We consider combinatorial optimization problems with uncertainty in the cost vector. Recently, a novel approach was developed to deal with such uncertainties: instead of a single one robust solution, obtained by solving a min max problem, the authors consider a set of solutions obtained by solving a min max min problem. In this new approach, the set of solutions is computed once and we can choose the best one in real time each time a cost vector occurs yielding better solutions compared to the min max approach. In this paper, we apply the new approach to the absolute and relative regret cases. Algorithms to solve the min max min robust (relative) regret problems are presented with computational experiments.},
 	Author = {Crema, Alejandro},
@@ -254,21 +229,19 @@
 	Year = {2020},
 	Bdsk-Url-1 = {https://doi.org/10.1007/s00186-020-00712-y}
 }
-
 @article{goerigk2020min,
-title = {Min–max–min robustness for combinatorial problems with discrete budgeted uncertainty},
-journal = {Discrete Applied Mathematics},
-volume = {285},
-pages = {707-725},
-year = {2020},
-issn = {0166-218X},
-doi = {https://doi.org/10.1016/j.dam.2020.07.011},
-url = {https://www.sciencedirect.com/science/article/pii/S0166218X20303553},
-author = {Marc Goerigk and Jannis Kurtz and Michael Poss},
-keywords = {Robust combinatorial optimization, Min–max–min robustness, -adaptability, Budgeted uncertainty},
-abstract = {We consider robust combinatorial optimization problems with cost uncertainty where the decision maker can prepare K solutions beforehand and chooses the best of them once the true cost is revealed. Also known as min–max–min robustness (a special case of K-adaptability), it is a viable alternative to otherwise intractable two-stage problems. The uncertainty set assumed in this paper considers that in any scenario, at most Γ of the components of the cost vectors will be higher than expected, which corresponds to the extreme points of the budgeted uncertainty set. While the classical min–max problem with budgeted uncertainty is essentially as easy as the underlying deterministic problem, it turns out that the min–max–min problem is NP-hard for many easy combinatorial optimization problems, and not approximable in general. We thus present an integer programming formulation for solving the problem through a row-and-column generation algorithm. While exact, this algorithm can only cope with small problems, so we present two additional heuristics leveraging the structure of budgeted uncertainty. We compare our row-and-column generation algorithm and our heuristics on min-knapsack and shortest path instances previously used in the scientific literature and find that the heuristics obtain good quality solutions in short computational times.}
+  title = {Min–max–min robustness for combinatorial problems with discrete budgeted uncertainty},
+  journal = {Discrete Applied Mathematics},
+  volume = {285},
+  pages = {707-725},
+  year = {2020},
+  issn = {0166-218X},
+  doi = {https://doi.org/10.1016/j.dam.2020.07.011},
+  url = {https://www.sciencedirect.com/science/article/pii/S0166218X20303553},
+  author = {Marc Goerigk and Jannis Kurtz and Michael Poss},
+  keywords = {Robust combinatorial optimization, Min–max–min robustness, -adaptability, Budgeted uncertainty},
+  abstract = {We consider robust combinatorial optimization problems with cost uncertainty where the decision maker can prepare K solutions beforehand and chooses the best of them once the true cost is revealed. Also known as min–max–min robustness (a special case of K-adaptability), it is a viable alternative to otherwise intractable two-stage problems. The uncertainty set assumed in this paper considers that in any scenario, at most Γ of the components of the cost vectors will be higher than expected, which corresponds to the extreme points of the budgeted uncertainty set. While the classical min–max problem with budgeted uncertainty is essentially as easy as the underlying deterministic problem, it turns out that the min–max–min problem is NP-hard for many easy combinatorial optimization problems, and not approximable in general. We thus present an integer programming formulation for solving the problem through a row-and-column generation algorithm. While exact, this algorithm can only cope with small problems, so we present two additional heuristics leveraging the structure of budgeted uncertainty. We compare our row-and-column generation algorithm and our heuristics on min-knapsack and shortest path instances previously used in the scientific literature and find that the heuristics obtain good quality solutions in short computational times.}
 }
-
 @article{kurtz2021new,
   doi = {10.48550/ARXIV.2106.03107},
   url = {https://arxiv.org/abs/2106.03107},
@@ -279,7 +252,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   year = {2021},
   copyright = {Creative Commons Attribution 4.0 International}
 }
-
 @article{kong2020robust,
   author    = {Weihao Kong and
                Raghav Somani and
@@ -296,9 +268,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   biburl    = {https://dblp.org/rec/journals/corr/abs-2006-09702.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % stuff jourdain adds in at the end 
 % note this series does not seem to have volume numbers
 @book{hastie2009the,
@@ -310,8 +279,9 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     address={New York NY}, 
     year={2009}
 } 
-%%% robust optimization %%%
-%% books %%
+%%%%%%%%%%%%%%% end of section with new additions for min-max-min revision that needs to be recategorized
+
+%%% robust optimization
 % finite uncertainty sets for several combinatorial optimization problems (1996)
 @book{kouvelis2013robust,
   title={Robust Discrete Optimization and Its Applications},
@@ -323,7 +293,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   publisher={Springer},
   address={Boston MA}
 }
-
 @book{ben2009robust,
   title={Robust Optimization},
   author={Ben-Tal, Aharon and El Ghaoui, Laurent and Nemirovski, Arkadi},
@@ -333,8 +302,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   address={Princeton NJ},
   publisher={Princeton University Press}
 }
-
-%% surveys %%
 @article{bertsimas2011theory,
     author = {Bertsimas, Dimitris and Brown, David B. and Caramanis, Constantine},
     title = {Theory and Applications of Robust Optimization},
@@ -349,7 +316,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     abstract = { In this paper we survey the primary research, both theoretical and applied, in the area of robust optimization (RO). Our focus is on the computational attractiveness of RO approaches, as well as the modeling power and broad applicability of the methodology. In addition to surveying prominent theoretical results of RO, we also present some recent results linking RO to adaptable models for multistage decision-making problems. Finally, we highlight applications of RO across a wide spectrum of domains, including finance, statistics, learning, and various areas of engineering.},
     publisher={SIAM}
 }
-
 @article{ben2008selected,
   title={Selected topics in robust convex optimization},
   author={Ben-Tal, Aharon and Nemirovski, Arkadi},
@@ -361,7 +327,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   publisher={Springer},
   abstract={Robust Optimization is a rapidly developing methodology for handling optimization problems affected by non-stochastic “uncertain-but- bounded” data perturbations. In this paper, we overview several selected topics in this popular area, specifically, (1) recent extensions of the basic concept of robust counterpart of an optimization problem with uncertain data, (2) tractability of robust counterparts, (3) links between RO and traditional chance constrained settings of problems with stochastic data, and (4) a novel generic application of the RO methodology in Robust Linear Control.}
 }
-
 @article{buchheim2018robust,
   title={Robust Combinatorial Optimization Under Convex and Discrete Cost Uncertainty},
   author={Buchheim, Christoph and Kurtz, Jannis},
@@ -373,9 +338,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   publisher={Elsevier},
   abstract={In this survey, we discuss the state of the art of robust combinatorial optimization under uncertain cost functions. We summarize complexity results presented in the literature for various underlying problems, with the aim of pointing out the connections between the different results and approaches, and with a special emphasis on the role of the chosen uncertainty sets. Moreover, we give an overview over exact solution methods for NP-hard cases. While mostly concentrating on the classical concept of strict robustness, we also cover more recent two-stage optimization paradigms.}
 }
-
-%% papers %%
-% classic robust
 % first first proposal of an uncertainty set
 @article{soyster1973convex,
    ISSN = {0030364X, 15265463},
@@ -451,7 +413,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     abstract = {We treat in this paper linear programming (LP) problems with uncertain data. The focus is on uncertainty associated with hard constraints: those which must be satisfied, whatever is the actual realization of the data (within a prescribed uncertainty set). We suggest a modeling methodology whereas an uncertain LP is replaced by its robust counterpart (RC). We then develop the analytical and computational optimization tools to obtain robust solutions of an uncertain LP problem via solving the corresponding explicitly stated convex RC program. In particular, it is shown that the RC of an LP with ellipsoidal uncertainty set is computationally tractable, since it leads to a conic quadratic program, which can be solved in polynomial time.},
     publisher={Elsevier}
 }
-% adaptive / adjustable %
 % adjustable optimization - NP-Hard but the affinely adjustable counterpart is tractable with fixed recourse and admits a tractable, tight approximation otherwise
 @article{ben2004adjustable,
   title={Adjustable Robust Solutions of Uncertain Linear Programs},
@@ -491,7 +452,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   year={2011},
   publisher={American Chemical Society}
 }
-% multistage %
 % bridging the gap between the static robust problem and the fully adjustable problem in multistage decision making - allowing for k contingency plans and handling discrete variables
 @article{bertsimas2010finite,
     author={Bertsimas, Dimitris and Caramanis, Constantine},
@@ -541,7 +501,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     pages={2809-2824},
     doi={10.1109/TAC.2011.2162878}
 }
-
 @article{bertsimas2019affine,
     author = {Bertsimas, Dimitris and Iancu, Dan A. and Parrilo, Pablo A.},
     title = {Optimality of Affine Policies in Multistage Robust Optimization},
@@ -554,7 +513,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     abstract = {In this paper, we prove the optimality of disturbance-affine control policies in the context of one-dimensional, constrained, multistage robust optimization. Our results cover the finite-horizon case, with minimax (worst-case) objective, and convex state costs plus linear control costs. We develop a new proof methodology, which explores the relationship between the geometrical properties of the feasible set of solutions and the structure of the objective function. Apart from providing an elegant and conceptually simple proof technique, the approach also entails very fast algorithms for the case of piecewise-affine state costs, which we explore in connection with a classical inventory management application.},
     publisher={INFORMS}
 }
-
 % considering binary adaptive/adjustable decisions 
 @article{bertsimas2015design,
     author = {Bertsimas, Dimitris and Georghiou, Angelos},
@@ -580,8 +538,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     doi = {10.1287/opre.2016.1515},
     abstract = {We present a new partition-and-bound method for multistage adaptive mixed-integer optimization (AMIO) problems that extends previous work on finite adaptability. The approach analyzes the optimal solution to a static (nonadaptive) version of an AMIO problem to gain insight into which regions of the uncertainty set are restricting the objective function value. We use this information to construct partitions in the uncertainty set, leading to a finitely adaptable formulation of the problem. We use the same information to determine a lower bound on the fully adaptive solution. The method repeats this process iteratively to further improve the objective until a desired gap is reached. We provide theoretical motivation for this method, and characterize its convergence properties and the growth in the number of partitions. Using these insights, we propose and evaluate enhancements to the method such as warm starts and smarter partition creation. We describe in detail how to apply finite adaptability to multistage AMIO problems to appropriately address nonanticipativity restrictions. Finally, we demonstrate in computational experiments that the method can provide substantial improvements over a nonadaptive solution and existing methods for problems described in the literature. In particular, we find that our method produces high-quality solutions versus the amount of computational effort, even as the problem scales in the number of time stages and the number of decision variables.}
 }
-
-% min-max-min robust %
 % consider min-max-min/finite adaptability, shown that the problem is as easy as the underlying combinatorial problem if k \geq n+1 and if the uncertainty s3et is a polytope or ellipsoid, however many tractable problems turn NP-Hard for discrete uncertainty
 @article{buchheim2016min,
     title = {Min--max--min Robustness: A New Approach to Combinatorial Optimization Under Uncertainty Based on Multiple Solutions},
@@ -626,9 +582,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
     abstract = {We consider combinatorial optimization problems with uncertain linear objective functions. In the min–max–min robust optimization approach, a fixed number k of feasible solutions is computed such that the respective best of them is optimal in the worst case. The idea is to calculate the set of candidate solutions in a potentially expensive preprocessing phase and then select the best solution out of this set in real-time, once the actual scenario is known. In this paper, we investigate the complexity of the resulting min–max–min problem in the case of discrete uncertainty, as well as its connection to the classical min–max robust counterpart, for many classical combinatorial optimization problems. Essentially, it turns out that the min–max–min problem is not harder to solve than the min–max problem, while producing much better solutions in general for larger k. In particular, this approach may mitigate the so-called price of robustness, making it an attractive alternative to the classical robust optimization approach in many practical applications.},
     publisher = {Elsevier}
 }
-
-
-
 @article{chassein2019faster2019,
 	abstract = {We consider robust combinatorial optimization problems where the decision maker can react to a scenario by choosing from a finite set of k solutions. This approach is appropriate for decision problems under uncertainty where the implementation of decisions requires preparing the ground. We focus on the case that the set of possible scenarios is described through a budgeted uncertainty set and provide three algorithms for the problem. The first algorithm solves heuristically the dualized problem, a non-convex mixed-integer non-linear program (MINLP), via an alternating optimization approach. The second algorithm solves the MINLP exactly for k=2 through a dedicated spatial branch-and-bound algorithm. The third approach enumerates k-tuples, relying on strong bounds to avoid a complete enumeration. We test our methods on shortest path instances that were used in the previous literature and on randomly generated knapsack instances, and find that our methods considerably outperform previous approaches. Many instances that were previously not solved within hours can now be solved within few minutes, often even faster.},
 	author = {Andr{\'e} Chassein and Marc Goerigk and Jannis Kurtz and Michael Poss},
@@ -646,12 +599,10 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
 	bdsk-url-2 = {https://doi.org/10.1016/j.ejor.2019.05.045}}
 
 
-%%% online k-center / facility location problem %%%
-% applications / datasets / benchmarking %
+%%% online k-center / facility location problem
 
 
-%%% k-center problem %%%
-%% books %%
+%%% k-center problem
 @book{anderberg2014cluster,
   title={Cluster Analysis for Applications},
   series={Probability and Mathematical Statistics: A Series of Monographs and Textbooks},
@@ -677,7 +628,6 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   publisher={Springer Berlin},
   address={Heidelberg}
 }
-
 @book{jain1988algorithms,
   author = {Jain, Anil K. and Dubes, Richard C.}, 
   title = {Algorithms for Clustering Data}, 
@@ -686,11 +636,25 @@ abstract = {We consider robust combinatorial optimization problems with cost unc
   publisher = {Prentice-Hall, Inc.}, 
   address = {Hoboken NJ}
 }
-
-%% surveys %%
 % includes approximation results
 @article{agarwal1998efficient,
-author = {Agarwal, Pankaj K. and Sharir, Micha}, title = {Efficient Algorithms for Geometric Optimization}, year = {1998}, issue_date = {Dec. 1998}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, volume = {30}, number = {4}, issn = {0360-0300}, url = {https://doi.org/10.1145/299917.299918}, doi = {10.1145/299917.299918}, abstract = {We review the recent progress in the design of efficient algorithms for various problems in geometric optimization. We present several techniques used to attack these problems, such as parametric searching, geometric alternatives to parametric searching, prune-and-search techniques for linear programming and related problems, and LP-type problems and their efficient solution. We then describe a wide range of applications of these and other techniques to numerous problems in geometric optimization, including facility location, proximity problems, statistical estimators and metrology, placement and intersection of polygons and polyhedra, and ray shooting and other query-type problems.}, journal = {ACM Comput. Surv.}, month = {dec}, pages = {412–458}, numpages = {47}, keywords = {randomized algorithms, parametric searching, prune-and-search, collision detection, matrix searching, linear programming, proximity problems, clustering}
+  author = {Agarwal, Pankaj K. and Sharir, Micha},
+  title = {Efficient Algorithms for Geometric Optimization}, 
+  year = {1998}, 
+  issue_date = {Dec. 1998}, 
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {30},
+  number = {4},
+  issn = {0360-0300},
+  url = {https://doi.org/10.1145/299917.299918},
+  doi = {10.1145/299917.299918},
+  abstract = {We review the recent progress in the design of efficient algorithms for various problems in geometric optimization. We present several techniques used to attack these problems, such as parametric searching, geometric alternatives to parametric searching, prune-and-search techniques for linear programming and related problems, and LP-type problems and their efficient solution. We then describe a wide range of applications of these and other techniques to numerous problems in geometric optimization, including facility location, proximity problems, statistical estimators and metrology, placement and intersection of polygons and polyhedra, and ray shooting and other query-type problems.},
+  journal = {ACM Comput. Surv.},
+  month = {dec},
+  pages = {412–458},
+  numpages = {47},
+  keywords = {randomized algorithms, parametric searching, prune-and-search, collision detection, matrix searching, linear programming, proximity problems, clustering}
 }
 % surveying heuristic approaches
 @inproceedings{rana2009heuristic,
@@ -703,7 +667,6 @@ author = {Agarwal, Pankaj K. and Sharir, Micha}, title = {Efficient Algorithms f
   pages={332-335},
   doi={10.1109/IADCC.2009.4809031}
 }
-
 % NP-hard approximation 
 @article{hochbaum1984hard,
   title={When are NP-Hard Location Problems Easy?},
@@ -716,8 +679,6 @@ author = {Agarwal, Pankaj K. and Sharir, Micha}, title = {Efficient Algorithms f
   issn={1572-9338},
   abstract={We discuss in this paper several location problems for which it is an NP-hard problem to find an approximate solution. Given certain assumptions on the input distributions, we present polynomial algorithms that deliver a solution asymptotically close to the optimum with probability that is asymptotically one (the exact nature of this asymptotic convergence is described in the paper). In that sense the subproblems defined on the specified family of inputs are in fact easy.}
 }
-
-%% papers %%
 % first proposal of the k-center - referred to as p-center in terms of a network, and shortest path between points including points on edges and the actual original points
 @article{hakimi1964optimum,
   title={Optimum Locations of Switching Centers and the Absolute Centers and Medians of a Graph},
@@ -772,17 +733,17 @@ author = {Agarwal, Pankaj K. and Sharir, Micha}, title = {Efficient Algorithms f
 }
 % considers a setting in which the distances satisfy the triangle inequality, but do not satisfy the symmetry property. They call this the asymmetric k-center problem
 @InProceedings{archer2001two,
-author={Archer, Aaron},
-editor={Aardal, Karen
-and Gerards, Bert},
-title={Two {O}(log*k)-Approximation Algorithms for the Asymmetric k-Center Problem},
-booktitle={Integer Programming and Combinatorial Optimization},
-year={2001},
-publisher={Springer Berlin},
-address={Heidelberg},
-pages={1--14},
-abstract={Given a set V of n points and the distances between each pair, the k-center problem asks us to choose a subset C ⊆ V of size k that minimizes the maximum over all points of the distance from C to the point. This problem is NP-hard even when the distances are symmetric and satisfy the triangle inequality, and Hochbaum and Shmoys gave a best-possible 2-approximation for this case.},
-isbn={978-3-540-45535-6}
+  author={Archer, Aaron},
+  editor={Aardal, Karen
+  and Gerards, Bert},
+  title={Two {O}(log*k)-Approximation Algorithms for the Asymmetric k-Center Problem},
+  booktitle={Integer Programming and Combinatorial Optimization},
+  year={2001},
+  publisher={Springer Berlin},
+  address={Heidelberg},
+  pages={1--14},
+  abstract={Given a set V of n points and the distances between each pair, the k-center problem asks us to choose a subset C ⊆ V of size k that minimizes the maximum over all points of the distance from C to the point. This problem is NP-hard even when the distances are symmetric and satisfy the triangle inequality, and Hochbaum and Shmoys gave a best-possible 2-approximation for this case.},
+  isbn={978-3-540-45535-6}
 }
 % the paper above cites the following two as first work on the asymmetric version:
 @inproceedings{vishwanathan1996log,
@@ -868,7 +829,6 @@ isbn={978-3-540-45535-6}
   year={1988},
   publisher = {Association for Computing Machinery}
 }
-
 % exact algorithms
 @article{gonzalez1991covering,
   title={Covering a Set of Points in Multidimensional Space},
@@ -890,7 +850,6 @@ isbn={978-3-540-45535-6}
   year={1993},
   publisher={Springer}
 }
-
 % approximation and exact in higher dimensions and under L_inf and L_2 metrics
 @article{agarwal2002exact,
   title={Exact and Approximation Algorithms for Clustering},
@@ -902,7 +861,6 @@ isbn={978-3-540-45535-6}
   year={2002},
   publisher={Springer}
 }
-
 % handling general k-center problem and extensions using branch-and-bound with a Mixed-Integer-Convex-Programming formulation with geometric inequalities
 @article{brandenberg2009new,
   title={New Algorithms for $k$-center and Extensions},
@@ -915,7 +873,7 @@ isbn={978-3-540-45535-6}
   publisher={Springer}
 }
 
-% facility location / capacitated k-center
+%%% offline center problem applications
 % uncapacitated facility location problem
 @article{charikar2005improved,
   title={Improved Combinatorial Algorithms for Facility Location problems},
@@ -927,7 +885,6 @@ isbn={978-3-540-45535-6}
   year={2005},
   publisher={SIAM}
 }
-
 % approximation for capacitated k-center
 @article{barilan1993allocate,
   title={How to Allocate Network Centers},
@@ -939,7 +896,6 @@ isbn={978-3-540-45535-6}
   year={1993},
   publisher={Elsevier}
 }
-
 % approximation factor of 6 for capacitated k-center
 @article{khuller2000capacitated,
   title={The Capacitated $k$-center Problem},
@@ -951,7 +907,6 @@ isbn={978-3-540-45535-6}
   year={2000},
   publisher={SIAM}
 }
-
 % clustering/motivated by big data applications
 @inproceedings{ester2006joint,
   title={Joint Cluster Analysis of Attribute Data and Relationship Data: the Connected $k$-center Problem},
@@ -961,7 +916,6 @@ isbn={978-3-540-45535-6}
   year={2006},
   publisher={SIAM}
 }
-
 % including some references to non-metric cases - lots of parallel algorithms
 @inproceedings{blelloch2010parallel,
   title={Parallel Approximation Algorithms for Facility-Location Problems},
@@ -971,7 +925,6 @@ isbn={978-3-540-45535-6}
   year={2010},
   publisher={ACM}
 }
-
 @article{hochbaum1982heuristics,
   title={Heuristics for the Fixed Cost Median Problem},
   author={Hochbaum, Dorit S},
@@ -982,7 +935,6 @@ isbn={978-3-540-45535-6}
   year={1982},
   publisher={Springer}
 }
-
 % 
 @inproceedings{moscibroda2005facility,
   title={Facility location: Distributed Approximation},
@@ -992,7 +944,6 @@ isbn={978-3-540-45535-6}
   year={2005},
   publisher={ACM}
 }
-
 @inproceedings{kleindessner2019fair,
   title={Fair k-center Clustering for Data Summarization},
   author={Kleindessner, Matth{\"a}us and Awasthi, Pranjal and Morgenstern, Jamie},
@@ -1001,8 +952,6 @@ isbn={978-3-540-45535-6}
   year={2019},
   publisher={PMLR}
 }
-
-
 @inproceedings{badoiu2002approximate,
   title={Approximate Clustering via Core-Sets},
   author={B{\=a}doiu, Mihai and Har-Peled, Sariel and Indyk, Piotr},
@@ -1013,7 +962,6 @@ isbn={978-3-540-45535-6}
 }
 
 %%% convex optimization %%%
-%% surveys / lectures
 % nesterov lectures
 @misc{nesterov1998introductory,
   title={Introductory lectures on convex programming},
@@ -1036,8 +984,20 @@ isbn={978-3-540-45535-6}
 
 %%% tools
 % networkx
+@article{osti_960616,
+  title = {Exploring network structure, dynamics, and function using NetworkX},
+  author = {Hagberg, Aric and Swart, Pieter J. and Schult, Daniel A.},
+  abstractNote = {NetworkX is a Python language package for exploration and analysis of networks and network algorithms. The core package provides data structures for representing many types of networks, or graphs, including simple graphs, directed graphs, and graphs with parallel edges and self loops. The nodes in NetworkX graphs can be any (hashable) Python object and edges can contain arbitrary data; this flexibility mades NetworkX ideal for representing networks found in many different scientific fields. In addition to the basic data structures many graph algorithms are implemented for calculating network properties and structure measures: shortest paths, betweenness centrality, clustering, and degree distribution and many more. NetworkX can read and write various graph formats for eash exchange with existing data, and provides generators for many classic graphs and popular graph models, such as the Erdoes-Renyi, Small World, and Barabasi-Albert models, are included. The ease-of-use and flexibility of the Python programming language together with connection to the SciPy tools make NetworkX a powerful tool for scientific computations. We discuss some of our recent work studying synchronization of coupled oscillators to demonstrate how NetworkX enables research in the field of computational networks.},
+  doi = {},
+  url = {https://www.osti.gov/biblio/960616}, journal = {},
+  number = ,
+  volume = ,
+  place = {United States},
+  year = {2008},
+  month = {1}
+}
 
-%%% misc stuff
+%%% misc
 % hamming distance ref
 @book{hamming1986coding,
   title={Coding and information theory},
@@ -1045,4 +1005,3 @@ isbn={978-3-540-45535-6}
   year={1986},
   publisher={Prentice-Hall, Inc.}
 }
-

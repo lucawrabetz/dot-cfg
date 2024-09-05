@@ -4,6 +4,7 @@ set -gx TERM xterm-256color
 # Path additions
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
+set -gx PATH /Users/luw28/.nextmv $PATH
 
 # Environment Variables
 set -gx NVIM $HOME/.config/nvim
@@ -20,9 +21,18 @@ set -gx PYTHON3 $HOME/anaconda3/bin/python3
 set -gx NODEJS /opt/homebrew/bin/node
 set -gx SMOD04 luw28@smod04.ie.pitt.edu
 set -gx IESUMS1 luw28@iesums1.ie.pitt.edu
+set -gx IESUMS9 luw28@iesums9.ie.pitt.edu
 set -gx IESUMS10 luw28@iesums10.ie.pitt.edu
 set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
 set -gx LIN1 root@50.116.44.198
+
+# Nextmv environment variable
+if type nextmv > /dev/null
+    set tok (nextmv token 2>/dev/null)
+    if test $status -eq 0
+        set -x NEXTMV_TOKEN $tok
+    end
+end
 
 # Gurobi
 set -gx PATH $GUROBI_HOME/bin $PATH
@@ -235,6 +245,7 @@ alias vrc "vim $VIMRC"
 alias frc "vim $FISHRC"
 alias trc "vim $TMUXRC"
 alias iesums1 "ssh $IESUMS1"
+alias iesums9 "ssh $IESUMS9"
 alias iesums10 "ssh $IESUMS10"
 alias iesums11 "ssh $IESUMS11"
 alias smod04 "ssh $SMOD04"

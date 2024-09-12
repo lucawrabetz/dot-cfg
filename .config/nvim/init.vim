@@ -75,6 +75,7 @@ augroup common
   autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
   autocmd FileType lua,ruby,html,javascript,typescript,css,json,vue,vim,yaml setlocal shiftwidth=2 tabstop=2
   " need to debug: autocmd FileType tex inoremap ` `'<C-g>U
+  autocmd VimEnter * Copilot disable
 augroup end
 
 " ~functions~

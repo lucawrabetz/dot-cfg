@@ -3,3 +3,6 @@
 !.config/nvim/*
 .config/nvim/sessions/*
 !.config/fish/*
+.latex/*
+!.latex/main.tex
+!.latex/main.bib

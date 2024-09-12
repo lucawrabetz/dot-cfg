@@ -171,13 +171,6 @@ nnoremap <Leader>i :bprev<CR>
 nnoremap <Leader>m :bdelete<CR>
 nnoremap <Leader>b :bfirst<CR>
 nnoremap <Leader>n :blast<CR>
-nnoremap <Leader>a :call FzfBufferAdd()<CR>
-function! FzfBufferAdd()
-    let l:path = system('fzf')
-    if l:path != ''
-        execute 'badd ' . fnameescape(l:path)
-    endif
-endfunction
 nnoremap <Leader>ff /
 nnoremap <Leader>fr :%s/
 nnoremap <expr> <Leader>fl ":<C-u>" . line(".") . "," . (line(".")) . "+"

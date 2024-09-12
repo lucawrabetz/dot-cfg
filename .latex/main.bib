@@ -2,6 +2,44 @@
 % try to have one comment before each entry to summarize
 % `%%%` to subdivide into sections, but don't do this too much
 
+%%% classic OR
+% TODO: LP books
+% TODO: Convex books
+% nemhauser and wosley - try to find a better citation
+@book{wolsey2014integer,
+  title={Integer and combinatorial optimization},
+  author={Wolsey, Laurence A and Nemhauser, George L},
+  year={2014},
+  publisher={John Wiley \& Sons}
+}
+% TODO: classic bender's + other important bender's papers
+@article{conn1990projection,
+	abstract = {Several algorithms already exist for solving the uncapacitated facility location problem. The most efficient are based upon the solution of the strong linear programming relaxation. The dual of this relaxation has a condensed form which consists of minimizing a certain piecewise linear convex function. This paper presents a new method for solving the uncapacitated facility location problem based upon the exact solution of the condensed dual via orthogonal projections. The amount of work per iteration is of the same order as that of a simplex iteration for a linear program inm variables and constraints, wherem is the number of clients. For comparison, the underlying linear programming dual hasmn + m + n variables andmn +n constraints, wheren is the number of potential locations for the facilities. The method is flexible as it can handle side constraints. In particular, when there is a duality gap, the linear programming formulation can be strengthened by adding cuts. Numerical results for some classical test problems are included.},
+	author = {Conn, A. R. and Cornu{\'e}Jols, G.},
+	date = {1990/01/01},
+	date-added = {2024-09-10 13:29:38 -0400},
+	date-modified = {2024-09-10 13:29:38 -0400},
+	doi = {10.1007/BF01585746},
+	id = {Conn1990},
+	isbn = {1436-4646},
+	journal = {Mathematical Programming},
+	number = {1},
+	pages = {273--298},
+	title = {A projection method for the uncapacitated facility location problem},
+	url = {https://doi.org/10.1007/BF01585746},
+	volume = {46},
+	year = {1990},
+	bdsk-url-1 = {https://doi.org/10.1007/BF01585746}
+}
+% early survey on uncapacitated facility location
+@techreport{cornuejols1983uncapicitated,
+  title={The uncapicitated facility location problem},
+  author={Cornu{\'e}jols, G{\'e}rard and Nemhauser, George and Wolsey, Laurence},
+  year={1983},
+  institution={Cornell University Operations Research and Industrial Engineering}
+}
+
+
 %%% bilevel optimization
 @book{garey1979computers,
     author = "Michael R. Garey and David S. Johnson",
@@ -596,13 +634,137 @@
 	volume = {279},
 	year = {2019},
 	bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/S0377221719304758},
-	bdsk-url-2 = {https://doi.org/10.1016/j.ejor.2019.05.045}}
+	bdsk-url-2 = {https://doi.org/10.1016/j.ejor.2019.05.045}
+}
 
 
-%%% online k-center / facility location problem
-
-
-%%% k-center problem
+%%% offline center / facility location problems
+% facility location - good surveys and books
+@book{drezner2004facility,
+  title={Facility Location: Applications and Theory},
+  author={Drezner, Zvi and Hamacher, Horst W},
+  year={2004},
+  publisher={Springer Berlin},
+  address={Heidelberg}
+}
+@inbook{verter2011uncapacitated,
+	abstract = {The uncapacitated facility location problem (UFLP) involves locating an undetermined number of facilities to minimize the sum of the (annualized) fixed setup costs and the variable costs of serving the market demand from these facilities. UFLP is also known as the ``simple'' facility location problem SFLP, where both the alternative facility locations and the customer zones are considered discrete points on a plane or a road network. This assumes that the alternative sites have been predetermined and the demand in each customer zone is concentrated at the point representing that region. UFLP focuses on the production and distribution of a single commodity over a single time period (e.g., one year that is representative of the firm's long-run demand and cost structure), during which the demand is assumed to be known with certainty. The distinguishing feature of this basic discrete location problem, however, is the decision maker's ability to determine the size of each facility without any budgetary, technological, or physical restrictions. Krarup and Pruzan (1983) provided a comprehensive survey of the early literature on UFLP, including its solution properties. By demonstrating the relationships between UFLP and the set packing-covering-partitioning problems, they established its NP-completeness.},
+	address = {New York, NY},
+	author = {Verter, Vedat},
+	booktitle = {Foundations of Location Analysis},
+	doi = {10.1007/978-1-4419-7572-0_2},
+	editor = {Eiselt, H. A. and Marianov, Vladimir},
+	isbn = {978-1-4419-7572-0},
+	pages = {25--37},
+	publisher = {Springer US},
+	title = {Uncapacitated and Capacitated Facility Location Problems},
+	url = {https://doi.org/10.1007/978-1-4419-7572-0_2},
+	year = {2011},
+	bdsk-url-1 = {https://doi.org/10.1007/978-1-4419-7572-0_2}
+}
+@article{sridharan1995,
+  title = {The capacitated plant location problem},
+  journal = {European Journal of Operational Research},
+  volume = {87},
+  number = {2},
+  pages = {203-213},
+  year = {1995},
+  issn = {0377-2217},
+  doi = {https://doi.org/10.1016/0377-2217(95)00042-O},
+  url = {https://www.sciencedirect.com/science/article/pii/037722179500042O},
+  author = {R. Sridharan},
+  keywords = {Distribution, Facilities, Location, Branch and bound, Heuristics, Lagrangian relaxation},
+  abstract = {This paper provides a review of the various solution methods for the capacitated plant location problem. Heuristic and exact procedures, that have appeared in the literature, are covered. The review also examines two innovative concepts the Lagrangian heuristic and variable splitting, as proposed for the capacitated plant location problem.}
+}
+@article{turkoglu2020comparative,
+	abstract = {Determining the best location to serve companies'profitability and sustainability is becoming more crucial every day, since the rivalry between companies is getting more intense. The transformation of economies from manufacturing orientation towards service based activities has resulted in a growing contribution of the service based economy in gross domestic product and workforce of developing countries. These recent changes in the economy are indicators that service facility related location science has received greater interest. Service location problems has been studied since the 1900s and interest on these types of problems has started to grow especially after the aforementioned economic transformation in the 2000s. A large number of problems have been investigated for different service facilities. However, there is a need for a survey that systematically classifies these papers in order to comprehend them thoroughly due to their prominence and complexity. This paper examines 90 papers that have been published on service facility location problems since 2000. The paper presents a classification based on 19 main characteristics including key features and descriptive dimensions of location problems in order to develop a taxonomy from an operations research perspective to assist the location scientists and practitioners who work on service facility location problems. Furthermore, service facility location problems are categorized according to their application fields and investigated in detail relating to each characteristic. We also draw interesting comparisons of characteristics between facility location problems in different application fields and highlight directions for future research.},
+	author = {Celik Turkoglu, Derya and Erol Genevois, Mujde},
+	date = {2020/09/01},
+	date-added = {2024-09-11 09:15:46 -0400},
+	date-modified = {2024-09-11 09:15:46 -0400},
+	doi = {10.1007/s10479-019-03385-x},
+	id = {Celik Turkoglu2020},
+	isbn = {1572-9338},
+	journal = {Annals of Operations Research},
+	number = {1},
+	pages = {399--468},
+	title = {A comparative survey of service facility location problems},
+	url = {https://doi.org/10.1007/s10479-019-03385-x},
+	volume = {292},
+	year = {2020},
+	bdsk-url-1 = {https://doi.org/10.1007/s10479-019-03385-x}
+}
+@article{byrka2010optimal,
+	abstract = { We obtain a 1.5-approximation algorithm for the metric uncapacitated facility location (UFL) problem, which improves on the previously best known 1.52-approximation algorithm by Mahdian, Ye, and Zhang. Note that the approximability lower bound by Guha and Khuller is \$1.463\dots\$. An algorithm is a (\$\lambda\_f\$,\$\lambda\_c\$)-approximation algorithm if the solution it produces has total cost at most \$\lambda\_f\cdot F^*+\lambda\_c\cdot C^*\$, where \$F^*\$ and \$C^*\$ are the facility and the connection cost of an optimal solution. Our new algorithm, which is a modification of the \$(1+2/e)\$-approximation algorithm of Chudak and Shmoys, is a \$(1.6774,1.3738)\$-approximation algorithm for the UFL problem and is the first one that touches the approximability limit curve \$(\gamma\_f,1+2e^{-\gamma\_f})\$ established by Jain, Mahdian, and Saberi. As a consequence, we obtain the first optimal approximation algorithm for instances dominated by connection costs. When combined with a \$(1.11,1.7764)\$-approximation algorithm proposed by Jain et al., and later analyzed by Mahdian et al., we obtain the overall approximation guarantee of 1.5 for the metric UFL problem. We also describe how to use our algorithm to improve the approximation ratio for the 3-level version of UFL. },
+	author = {Byrka, Jaroslaw and Aardal, Karen},
+	doi = {10.1137/070708901},
+	eprint = {https://doi.org/10.1137/070708901},
+	journal = {SIAM Journal on Computing},
+	number = {6},
+	pages = {2212-2231},
+	title = {An Optimal Bifactor Approximation Algorithm for the Metric Uncapacitated Facility Location Problem},
+	url = {https://doi.org/10.1137/070708901},
+	volume = {39},
+	year = {2010},
+	bdsk-url-1 = {https://doi.org/10.1137/070708901}
+}
+@article{li2013,
+	abstract = {We present a 1.488-approximation algorithm for the metric uncapacitated facility location (UFL) problem. Previously, the best algorithm was due to Byrka (2007). Byrka proposed an algorithm parametrized by γ and used it with γ≈1.6774. By either running his algorithm or the algorithm proposed by Jain, Mahdian and Saberi (STOCʼ02), Byrka obtained an algorithm that gives expected approximation ratio 1.5. We show that if γ is randomly selected, the approximation ratio can be improved to 1.488. Our algorithm cuts the gap with the 1.463 approximability lower bound by almost 1/3.},
+	author = {Shi Li},
+	doi = {https://doi.org/10.1016/j.ic.2012.01.007},
+	issn = {0890-5401},
+	journal = {Information and Computation},
+	keywords = {Approximation, Facility location problem, Theory},
+	note = {38th International Colloquium on Automata, Languages and Programming (ICALP 2011)},
+	pages = {45-58},
+	title = {A 1.488 approximation algorithm for the uncapacitated facility location problem},
+	url = {https://www.sciencedirect.com/science/article/pii/S0890540112001459},
+	volume = {222},
+	year = {2013},
+	bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/S0890540112001459},
+	bdsk-url-2 = {https://doi.org/10.1016/j.ic.2012.01.007}
+}
+@article{byrka2017improved,
+  author = {Byrka, Jaros\l{}aw and Pensyl, Thomas and Rybicki, Bartosz and Srinivasan, Aravind and Trinh, Khoa},
+  title = {An Improved Approximation for k-Median and Positive Correlation in Budgeted Optimization},
+  year = {2017},
+  issue_date = {April 2017},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {13},
+  number = {2},
+  issn = {1549-6325},
+  url = {https://doi.org/10.1145/2981561},
+  doi = {10.1145/2981561},
+  abstract = {Dependent rounding is a useful technique for optimization problems with hard budget constraints. This framework naturally leads to negative correlation properties. However, what if an application naturally calls for dependent rounding on the one hand and desires positive correlation on the other? More generally, we develop algorithms that guarantee the known properties of dependent rounding but also have nearly bestpossible behavior—near-independence, which generalizes positive correlation—on “small” subsets of the variables. The recent breakthrough of Li and Svensson for the classical k-median problem has to handle positive correlation in certain dependent rounding settings, and does so implicitly. We improve upon Li-Svensson’s approximation ratio for k-median from 2.732 + ϵ to 2.675 + ϵ by developing an algorithm that improves upon various aspects of their work. Our dependent rounding approach helps us improve the dependence of the runtime on the parameter ϵ from Li-Svensson’s NO(1/ϵ2) to NO((1/ϵ)log(1/ϵ)).},
+  journal = {ACM Trans. Algorithms},
+  month = {mar},
+  articleno = {23},
+  numpages = {31},
+  keywords = {k-median, Combinatorial optimization, approximation algorithms, dependent rounding, facility location problems}
+}
+@article{guha1999greedy,
+	abstract = {A fundamental facility location problem is to choose the location of facilities, such as industrial plants and warehouses, to minimize the cost of satisfying the demand for some commodity. There are associated costs for locating the facilities, as well as transportation costs for distributing the commodities. We assume that the transportation costs form a metric. This problem is commonly referred to as theuncapacitated facility locationproblem. Application to bank account location and clustering, as well as many related pieces of work, are discussed by Cornuejols, Nemhauser, and Wolsey. Recently, the first constant factor approximation algorithm for this problem was obtained by Shmoys, Tardos, and Aardal. We show that a simple greedy heuristic combined with the algorithm by Shmoys, Tardos, and Aardal, can be used to obtain an approximation guarantee of 2.408. We discuss a few variants of the problem, demonstrating better approximation factors for restricted versions of the problem. We also show that the problem is max SNP-hard. However, the inapproximability constants derived from the max SNP hardness are very close to one. By relating this problem to Set Cover, we prove a lower bound of 1.463 on the best possible approximation ratio, assumingNP∉DTIME[nO(loglogn)].},
+	author = {Sudipto Guha and Samir Khuller},
+	doi = {https://doi.org/10.1006/jagm.1998.0993},
+	issn = {0196-6774},
+	journal = {Journal of Algorithms},
+	number = {1},
+	pages = {228-248},
+	title = {Greedy Strikes Back: Improved Facility Location Algorithms},
+	url = {https://www.sciencedirect.com/science/article/pii/S0196677498909932},
+	volume = {31},
+	year = {1999},
+	bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/S0196677498909932},
+	bdsk-url-2 = {https://doi.org/10.1006/jagm.1998.0993}
+}
+@inproceedings{shmoys1997approximation,
+  title={Approximation algorithms for facility location problems},
+  author={Shmoys, David B and Tardos, {\'E}va and Aardal, Karen},
+  booktitle={Proceedings of the twenty-ninth annual ACM symposium on Theory of computing},
+  pages={265--274},
+  year={1997}
+}
 @book{anderberg2014cluster,
   title={Cluster Analysis for Applications},
   series={Probability and Mathematical Statistics: A Series of Monographs and Textbooks},
@@ -620,13 +782,6 @@
   year={2011},
   publisher={American Mathematical Society},
   address={Providence RI}
-}
-@book{drezner2004facility,
-  title={Facility Location: Applications and Theory},
-  author={Drezner, Zvi and Hamacher, Horst W},
-  year={2004},
-  publisher={Springer Berlin},
-  address={Heidelberg}
 }
 @book{jain1988algorithms,
   author = {Jain, Anil K. and Dubes, Richard C.}, 
@@ -872,9 +1027,78 @@
   year={2009},
   publisher={Springer}
 }
-
-%%% offline center problem applications
-% uncapacitated facility location problem
+% logn approximation for uncapacitated facility location problem
+@article{hochbaum1982heuristics,
+	abstract = {We describe in this paper polynomial heuristics for three important hard problems---the discrete fixed cost median problem (the plant location problem), the continuous fixed cost median problem in a Euclidean space, and the network fixed cost median problem with convex costs. The heuristics for all the three problems guarantee error ratios no worse than the logarithm of the number of customer points. The derivation of the heuristics is based on the presentation of all types of median problems discussed as a set covering problem.},
+	author = {Hochbaum, Dorit S. },
+	date = {1982/12/01},
+	date-added = {2024-09-10 15:14:04 -0400},
+	date-modified = {2024-09-10 15:14:04 -0400},
+	doi = {10.1007/BF01581035},
+	id = {Hochbaum1982},
+	isbn = {1436-4646},
+	journal = {Mathematical Programming},
+	number = {1},
+	pages = {148--162},
+	title = {Heuristics for the fixed cost median problem},
+	url = {https://doi.org/10.1007/BF01581035},
+	volume = {22},
+	year = {1982},
+	bdsk-url-1 = {https://doi.org/10.1007/BF01581035}
+}
+@inproceedings{lin1992epsapproximations,
+  author = {Lin, Jyh-Han and Vitter, Jeffrey Scott},
+  title = {e-approximations with minimum packing constraint violation (extended abstract)},
+  year = {1992},
+  isbn = {0897915119},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/129712.129787},
+  doi = {10.1145/129712.129787},
+  abstract = {We present efficient new randomized and deterministic methods for transforming optimal solutions for a type of relaxed integer linear program into provably good solutions for the corresponding NP-hard discrete optimization problem. Without any constraint violation, the ε-approximation problem for many problems of this type is itself NP-hard. Our methods provide polynomial-time ε-approximations while attempting to minimize the packing constraint violation.Our methods lead to the first known approximation algorithms with provable performance guarantees for the s-median problem, the tree prunning problem, and the generalized assignment problem. These important problems have numerous  applications to data compression, vector quantization, memory-based learning, computer graphics, image processing, clustering, regression, network location, scheduling, and communication. We provide evidence via reductions that our approximation algorithms are nearly optimal in terms of the packing constraint violation. We also discuss some recent applications of our techniques to scheduling problems.},
+  booktitle = {Proceedings of the Twenty-Fourth Annual ACM Symposium on Theory of Computing},
+  pages = {771–782},
+  numpages = {12},
+  location = {Victoria, British Columbia, Canada},
+  series = {STOC '92}
+}
+@article{lin1992approximations,
+	abstract = {We present approximation algorithms for median problems in metric spaces and fixed-dimensional Euclidean spaces. Our algorithms use a new method for transforming an optimal solution of the linear program relaxation of the s-median problem into a provably good integral solution. This transformation technique is fundamentally different from the methods of randomized and deterministic rounding [7,8] and the methods proposed in [6] in the following way: Previous techniques never set variables with zero values in the fractional solution to 1. This departure from previous methods is crucial for the success of our algorithms.},
+	author = {Jyh-Han Lin and Jeffrey Scott Vitter},
+	doi = {https://doi.org/10.1016/0020-0190(92)90208-D},
+	issn = {0020-0190},
+	journal = {Information Processing Letters},
+	keywords = {Algorithms, analysis of algorithms, combinatorial problems, computational geometry, median, clustering, approximation, linear programming, relaxation, rounding, metric space, Euclidean space},
+	number = {5},
+	pages = {245-249},
+	title = {Approximation algorithms for geometric median problems},
+	url = {https://www.sciencedirect.com/science/article/pii/002001909290208D},
+	volume = {44},
+	year = {1992},
+	bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/002001909290208D},
+	bdsk-url-2 = {https://doi.org/10.1016/0020-0190(92)90208-D}
+}
+% uncapacitated facility location problem, approximation factor of 3 (and 6 for k-median) using a primal-dual (covering-packing) schema
+@article{jain2001approximation,
+  author = {Jain, Kamal and Vazirani, Vijay V.},
+  title = {Approximation algorithms for metric facility location and k-Median problems using the primal-dual schema and Lagrangian relaxation},
+  year = {2001},
+  issue_date = {March 2001},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {48},
+  number = {2},
+  issn = {0004-5411},
+  url = {https://doi.org/10.1145/375827.375845},
+  doi = {10.1145/375827.375845},
+  abstract = {We present approximation algorithms for the metric uncapacitated facility location problem and the metric k-median problem achieving guarantees of 3 and 6 respectively. The distinguishing feature of our algorithms is their low running time: O(m logm) and O(m logm(L + log (n))) respectively, where n and m are the total number of vertices and edges in the underlying complete bipartite graph on cities and facilities. The main algorithmic ideas are a new extension of the primal-dual schema and the use of Lagrangian relaxation to derive approximation algorithms.},
+  journal = {J. ACM},
+  month = {mar},
+  pages = {274–296},
+  numpages = {23},
+  keywords = {linear programming, facility location problem, approximation algorithms, Lagrangian relaxation, k-median problem}
+}
+% uncapacitated facility location problem - approximation factor of 1.728 using cost scaling (working on a scaled instance) and greedy local search improvement
 @article{charikar2005improved,
   title={Improved Combinatorial Algorithms for Facility Location problems},
   author={Charikar, Moses and Guha, Sudipto},
@@ -925,16 +1149,6 @@
   year={2010},
   publisher={ACM}
 }
-@article{hochbaum1982heuristics,
-  title={Heuristics for the Fixed Cost Median Problem},
-  author={Hochbaum, Dorit S},
-  journal={Mathematical Programming},
-  volume={22},
-  number={1},
-  pages={148--162},
-  year={1982},
-  publisher={Springer}
-}
 % 
 @inproceedings{moscibroda2005facility,
   title={Facility location: Distributed Approximation},
@@ -960,6 +1174,83 @@
   pages={250--257},
   year={2002}
 }
+@Inbook{blomer2016chapter,
+  author="Bl{\"o}mer, Johannes
+  and Lammersen, Christiane
+  and Schmidt, Melanie
+  and Sohler, Christian",
+  editor="Kliemann, Lasse
+  and Sanders, Peter",
+  title="Theoretical Analysis of the k-Means Algorithm -- A Survey",
+  bookTitle="Algorithm Engineering: Selected Results and Surveys",
+  year="2016",
+  publisher="Springer International Publishing",
+  address="Cham",
+  pages="81--116",
+  abstract="The k-means algorithm is one of the most widely used clustering heuristics. Despite its simplicity, analyzing its running time and quality of approximation is surprisingly difficult and can lead to deep insights that can be used to improve the algorithm. In this paper we survey the recent results in this direction as well as several extension of the basic k-means method.",
+  isbn="978-3-319-49487-6",
+  doi="10.1007/978-3-319-49487-6_3",
+  url="https://doi.org/10.1007/978-3-319-49487-6_3"
+}
+
+%%% online algorithms
+% online surveys
+@article{albers2003online,
+	abstract = {During the last 15 years online algorithms have received considerable research interest. In this survey we give an introduction to the competitive analysis of online algorithms and present important results. We study interesting application areas and identify open problems.},
+	author = {Albers, Susanne},
+	date = {2003/07/01},
+	date-added = {2024-09-12 10:46:43 -0400},
+	date-modified = {2024-09-12 10:46:43 -0400},
+	doi = {10.1007/s10107-003-0436-0},
+	id = {Albers2003},
+	isbn = {1436-4646},
+	journal = {Mathematical Programming},
+	number = {1},
+	pages = {3--26},
+	title = {Online algorithms: a survey},
+	url = {https://doi.org/10.1007/s10107-003-0436-0},
+	volume = {97},
+	year = {2003},
+	bdsk-url-1 = {https://doi.org/10.1007/s10107-003-0436-0}
+}
+% chapters of next book at https://link.springer.com/book/10.1007/BFb0029561?referer=www.springeronline.com
+@book{fiat1998online,
+  title={Online algorithms: The state of the art},
+  author={Fiat, Amos and Woeginger, Gerhard J},
+  editor={Fiat, Amos and Woeginger, Gerhard J},
+  volume={1442},
+  year={1998},
+  publisher={Springer}
+}
+@article{fotakis2011online,
+  title = {Online and incremental algorithms for facility location},
+  year = {2011},
+  issue_date = {March 2011},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {42},
+  number = {1},
+  issn = {0163-5700},
+  url = {https://doi.org/10.1145/1959045.1959065},
+  doi = {10.1145/1959045.1959065},
+  abstract = {In the online and incremental variants of Facility Location, the demands arrive one-by-one and must be assigned to an open facility upon arrival, without any knowledge about future demands. In the online variant, the decisions of opening a facility at a particular location and of assigning a demand to some facility are irrevocable. In the incremental variant, the algorithm can also merge existing facilities (and the corresponding demand clusters) with each other, and only the decision of assigning some demands to the same facility is irrevocable. The goal is to maintain, either online or incrementally, a set of facilities and an assignment of the demands to them that minimize the total facility opening cost plus the assignment cost for all demands.In this survey, we discuss the previous work on online and incremental algorithms for Facility Location. In addition to the main results, namely that the competitive ratio for the online variant is Θ(log nlog log n), where n is the number of demands, and that the competitive ratio for the incremental variant is O(1), we discuss all known online and incremental Facility Location algorithms, sketch the intuition behind them and the main ideas of their competitive analysis, and discuss some applications.},
+  journal = {SIGACT News},
+  month = {mar},
+  pages = {97–131},
+  numpages = {35}
+}
+@INPROCEEDINGS{meyerson2001online,
+  author={Meyerson, A.},
+  booktitle={Proceedings 42nd IEEE Symposium on Foundations of Computer Science}, 
+  title={Online facility location}, 
+  year={2001},
+  volume={},
+  number={},
+  pages={426-431},
+  keywords={Costs;Network servers;Web pages;Algorithm design and analysis;Linear approximation;Cables;Computer science;Application software;Extraterrestrial measurements},
+  doi={10.1109/SFCS.2001.959917}
+}
+
 
 %%% convex optimization %%%
 % nesterov lectures

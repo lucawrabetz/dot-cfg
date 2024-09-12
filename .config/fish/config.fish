@@ -5,6 +5,7 @@ set -gx TERM xterm-256color
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
 set -gx PATH /Users/luw28/.nextmv $PATH
+set -gx PATH $PATH /opt/homebrew/opt/llvm/bin 
 
 # Environment Variables
 set -gx NVIM $HOME/.config/nvim

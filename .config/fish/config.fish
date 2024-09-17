@@ -2,6 +2,7 @@ set fish_greeting ""
 set -gx TERM xterm-256color
 
 # Path additions
+set -gx PATH /Users/luw28/bin $PATH
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
 set -gx PATH /Users/luw28/.nextmv $PATH

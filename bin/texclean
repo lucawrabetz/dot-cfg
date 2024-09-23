@@ -1,0 +1,5 @@
+#!/bin/sh
+# texclean: Remove LaTeX auxiliary files
+rm -f *.aux *.bbl *.blg *.log *.out *.toc *.lof *.lot *.fls *.fdb_latexmk *.synctex.gz *.nav *.snm *.vrb *.dvi *.pdfsync
+
+echo "Cleanup complete."

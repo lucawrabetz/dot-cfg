@@ -18,4 +18,9 @@
     "python.linting.pylintEnabled": true,
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "black",
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.parameterTypes.enabled": false,
+    "pyright.inlayHints.parameterNames.enabled": false,
+    "pyright.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true
 }

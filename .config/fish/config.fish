@@ -26,7 +26,8 @@ set -gx IESUMS1 luw28@iesums1.ie.pitt.edu
 set -gx IESUMS9 luw28@iesums9.ie.pitt.edu
 set -gx IESUMS10 luw28@iesums10.ie.pitt.edu
 set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
-set -gx LIN1 root@50.116.44.198
+set -gx GIGI_B_IP 50.116.44.198
+set -gx GIGI_B luca@$GIGI_B_IP
 
 # Nextmv environment variable
 if type nextmv > /dev/null
@@ -251,7 +252,7 @@ alias iesums9 "ssh $IESUMS9"
 alias iesums10 "ssh $IESUMS10"
 alias iesums11 "ssh $IESUMS11"
 alias smod04 "ssh $SMOD04"
-alias lin1 "ssh $LIN1"
+alias gigib "ssh $GIGI_B"
 alias sums1cp "scp $IESUMS1:/home/luw28/"
 alias sums10cp "scp $IESUMS10:/home/luw28/"
 alias sums11cp "scp $IESUMS11:/home/luw28/"

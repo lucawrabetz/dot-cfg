@@ -6,6 +6,12 @@ snippet ni "noindent" i
 \noindent $1
 endsnippet
 
+snippet ms "medskip" i
+\medskip
+
+$1
+endsnippet
+
 snippet col "color" i
 \textcolor{$1}{$2} $0
 endsnippet
@@ -31,6 +37,13 @@ snippet beg "begin{} / end{}" i
 $0
 endsnippet
 
+snippet def "definition" i
+\begin{definition} \label{d: $1}
+	$2
+\end{definition}
+$0
+endsnippet
+
 snippet eni "enumerate" i
 \begin{enumerate}
 	\item $1
@@ -42,6 +55,16 @@ snippet iti "itemize" i
 \begin{itemize}
 	\item $1
 \end{itemize}
+$0
+endsnippet
+
+snippet fig "figure" i
+\begin{figure}[H]
+		\centering
+    \includegraphics[scale=0.5]{"figures/$1"}
+    \label{f: $2}
+    \caption{$3}
+\end{figure}
 $0
 endsnippet
 

@@ -155,10 +155,7 @@ nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 inoremap gf <Esc>
 inoremap fg <Esc>
-inoremap FG <Esc>
-inoremap GF <Esc>
-inoremap <Leader>fg <Esc>
-inoremap <Leader>gf <Esc>
+inoremap <Leader>. <Esc>
 
 inoremap ;; <Esc>la
 nnoremap <Leader>0 <C-w>v
@@ -174,6 +171,7 @@ nnoremap <Leader>b :bfirst<CR>
 nnoremap <Leader>n :blast<CR>
 nnoremap <Leader>ff /
 nnoremap <Leader>fr :%s/
+nnoremap <Leader>fo :s/
 nnoremap <expr> <Leader>fl ":<C-u>" . line(".") . "," . (line(".")) . "+"
 nnoremap <Leader>fs :s/
 nnoremap zz :FZF<CR>

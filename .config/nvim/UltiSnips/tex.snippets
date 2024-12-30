@@ -44,6 +44,44 @@ snippet def "definition" i
 $0
 endsnippet
 
+snippet exa "example" i
+\begin{example} \label{ex: $1}
+	$2
+\end{example}
+$0
+endsnippet
+
+snippet defxl "bigdefinition" i
+\begin{definition} \label{d: $1}
+	\emph{$2.}
+
+	\medskip\noindent
+	$3
+\end{definition}
+$0
+endsnippet
+
+snippet rem "remark" i
+\begin{remark} \label{r: $1}
+	$2
+\end{remark}
+$0
+endsnippet
+
+snippet lem "lemma" i
+\begin{lemma} \label{l: $1}
+	$2
+\end{lemma}
+$0
+endsnippet
+
+snippet prop "proposition" i
+\begin{Prop} \label{p: $1}
+	$2
+\end{Prop}
+$0
+endsnippet
+
 snippet eni "enumerate" i
 \begin{enumerate}
 	\item $1

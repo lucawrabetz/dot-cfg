@@ -1,5 +1,5 @@
 {
-    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnType": false,
     "coc.preferences.formatOnSave": true,
     "colors.enable": true,
     "clangd.path": "/usr/bin/clangd",

@@ -2,7 +2,7 @@
 
 generate_session_name() {
     local dir_name=$(basename "$1")
-    local acronym=$(echo "$dir_name" | tr '_.-' ' ' | awk '{for (i=1; i<=NF; i++) printf "%s", toupper(substr($i, 1, 1))}')
+    local acronym=$(echo "$dir_name" | tr '_.-' ' ' | awk '{for (i=1; i<=NF; i++) printf "%s", tolower(substr($i, 1, 1))}')
     echo "$acronym"
 }
 

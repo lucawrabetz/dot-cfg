@@ -24,6 +24,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/seoul256.vim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'sainnhe/everforest'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

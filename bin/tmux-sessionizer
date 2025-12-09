@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+generate_session_name() {
+    local dir_name=$(basename "$1")
+    local acronym=$(echo "$dir_name" | tr '_.-' ' ' | awk '{for (i=1; i<=NF; i++) printf "%s", tolower(substr($i, 1, 1))}')
+    echo "$acronym"
+}
+
+switch_to() {
+    if [[ -z $TMUX ]]; then
+        tmux attach-session -t $1
+    else
+        tmux switch-client -t $1
+    fi
+}
+
+has_session() {
+    tmux list-sessions | grep -q "^$1:"
+}
+
+hydrate() {
+    if [ -f $2/.tmux-sessionizer ]; then
+        tmux send-keys -t $1 "source $2/.tmux-sessionizer" c-M
+    elif [ -f $HOME/.tmux-sessionizer ]; then
+        tmux send-keys -t $1 "source $HOME/.tmux-sessionizer" c-M
+    fi
+}
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    # If someone wants to make this extensible, i'll accept
+    # PR
+    selected=$(find -L ~ ~/Dropbox -mindepth 1 -maxdepth 1 -type d | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+session_name=$(generate_session_name $selected)
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $session_name -c $selected
+    hydrate $session_name $selected
+    exit 0
+fi
+
+if ! has_session $session_name; then
+    tmux new-session -ds $session_name -c $selected
+    hydrate $session_name $selected
+fi
+
+switch_to $session_name

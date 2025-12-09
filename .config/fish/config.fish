@@ -42,6 +42,8 @@ end
 set -gx PATH $GUROBI_HOME/bin $PATH
 
 # Aliases
+alias zz 'fzf'
+alias tt 'tmux-sessionizer'
 alias c 'clear'
 alias e 'exit'
 alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

@@ -1,15 +1,21 @@
 set fish_greeting ""
 set -gx TERM xterm-256color
 
+fish_add_path /opt/homebrew/bin
+fish_add_path $HOME/bin
+fish_add_path $HOME/.local/bin
+fish_add_path /opt/homebrew/opt/llvm/bin
+fish_add_path $HOME/.docker/bin
+
 # Path additions
-set -gx PATH /Users/luw28/bin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
-set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
-set -gx PATH /Users/luw28/.nextmv $PATH
-set -gx PATH $PATH /opt/homebrew/opt/llvm/bin 
-set -gx PATH $PATH $HOME/.docker/bin
+# set -gx PATH $HOME/bin $PATH
+# set -gx PATH /opt/homebrew/bin $PATH
+# set -gx PATH /usr/local/texlive/2023/bin/universal-darwin $PATH
+# set -gx PATH $PATH /opt/homebrew/opt/llvm/bin 
+# set -gx PATH $PATH $HOME/.docker/bin
 
 # Environment Variables
+set -gx NVIMENV $HOME/.local/share/nvim/nvim-python-env
 set -gx NVIM $HOME/.config/nvim
 set -gx VIMRC $NVIM/init.vim
 set -gx NVIMSESSION $NVIM/sessions
@@ -20,26 +26,22 @@ set -gx TMUXRC $HOME/.tmux.conf
 set -gx GUROBI_HOME /Library/gurobi1001/macos_universal2
 set -gx LATEX $HOME/.latex
 set -gx BIB $LATEX/main.bib
-set -gx PYTHON3 $HOME/anaconda3/bin/python3
-set -gx NODEJS /opt/homebrew/bin/node
+set -gx PYTHON3_NVIM $NVIMENV/bin/python
 set -gx SMOD04 luw28@smod04.ie.pitt.edu
 set -gx IESUMS1 luw28@iesums1.ie.pitt.edu
 set -gx IESUMS9 luw28@iesums9.ie.pitt.edu
 set -gx IESUMS10 luw28@iesums10.ie.pitt.edu
 set -gx IESUMS11 luw28@iesums11.ie.pitt.edu
+
+set -gx VLLC_MAC_STUDIO_TS_IP 100.118.57.101
+set -gx LUCA_MBP_TS_IP 100.93.202.3
+
+set -gx VLLC_MAC_STUDIO luca@$VLLC_MAC_STUDIO_TS_IP
+
 set -gx GIGI_B_IP 50.116.44.198
 set -gx GIGI_B luca@$GIGI_B_IP
-
-# Nextmv environment variable
-if type nextmv > /dev/null
-    set tok (nextmv token 2>/dev/null)
-    if test $status -eq 0
-        set -x NEXTMV_TOKEN $tok
-    end
-end
-
-# Gurobi
-set -gx PATH $GUROBI_HOME/bin $PATH
+set -gx VISUAL "nvim"
+set -gx EDITOR "nvim"
 
 # Aliases
 alias zz 'fzf'
@@ -242,7 +244,6 @@ alias gswc 'git switch --create'
 alias gswd 'git switch $(git_develop_branch)'
 alias gswm 'git switch $(git_main_branch)'
 alias gta 'git tag --annotate'
-alias gtl 'gtl(){ git tag --sort=-v:refname -n --list "${1}*" }; noglob gtl'
 alias gts 'git tag --sign'
 alias gtv 'git tag | sort -V'
 alias vim nvim
@@ -254,6 +255,8 @@ alias iesums1 "ssh $IESUMS1"
 alias iesums9 "ssh $IESUMS9"
 alias iesums10 "ssh $IESUMS10"
 alias iesums11 "ssh $IESUMS11"
+
+alias vllcmstu "ssh $VLLC_MAC_STUDIO"
 alias smod04 "ssh $SMOD04"
 alias gigib "ssh $GIGI_B"
 alias sums1cp "scp $IESUMS1:/home/luw28/"
@@ -265,13 +268,3 @@ alias python "python3"
 alias pip "pip3"
 
 clear
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f $HOME/anaconda3/bin/conda
-    eval $HOME/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-end
-# <<< conda initialize <<<
-
-set -gx PATH $HOME/anaconda3/bin/ $PATH
-set -gx PATH $HOME/anaconda3/condabin $PATH
